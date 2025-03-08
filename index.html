@@ -82,42 +82,43 @@
     </main>
     <footer></footer>
     <script>
-     document.addEventListener("DOMContentLoaded", () => {
-    const regForm = document.querySelector(".reg-form"); // Форма
-    const regButton = document.getElementById("registrationBtn"); // Кнопка "Registration"
-    const closeButton = document.getElementById("close-reg-form-btn"); // Кнопка закрытия
-    const buttonsBox = document.querySelector(".main-page-btn__box"); // Блок кнопок
+      document.addEventListener("DOMContentLoaded", () => {
+        const regForm = document.querySelector(".reg-form"); // Форма
+        const regButton = document.getElementById("registrationBtn"); // Кнопка "Registration"
+        const closeButton = document.getElementById("close-reg-form-btn"); // Кнопка закрытия
+        const buttonsBox = document.querySelector(".main-page-btn__box"); // Блок кнопок
 
-    // Функция для показа формы
-    function showForm() {
-        regForm.classList.add("show"); // Показываем форму
-        buttonsBox.style.display = "none"; // Скрываем кнопки
-    }
+        // Функция для показа формы
+        function showForm() {
+          regForm.classList.add("show"); // Показываем форму
+          buttonsBox.style.display = "none"; // Скрываем кнопки
+        }
 
-    // Функция для скрытия формы
-    function hideForm() {
-        regForm.classList.remove("show"); // Скрываем форму
-        buttonsBox.style.display = "flex"; // Показываем кнопки
-    }
+        // Функция для скрытия формы
+        function hideForm() {
+          regForm.classList.remove("show"); // Скрываем форму
+          buttonsBox.style.display = "flex"; // Показываем кнопки
+        }
 
-    // Назначаем обработчики событий
-    regButton.addEventListener("click", showForm);
-    closeButton.addEventListener("click", hideForm);
+        // Назначаем обработчики событий
+        regButton.addEventListener("click", showForm);
+        closeButton.addEventListener("click", hideForm);
 
-    // Валидация паролей перед отправкой формы
-    regForm.addEventListener("submit", (event) => {
-        let password = document.getElementById("password-field").value;
-        let confirmPassword = document.getElementById("conf-password-field").value;
+        // Валидация паролей перед отправкой формы
+        regForm.addEventListener("submit", (event) => {
+          let password = document.getElementById("password-field").value;
+          let confirmPassword = document.getElementById(
+            "conf-password-field"
+          ).value;
 
-        if (password !== confirmPassword) {
+          if (password !== confirmPassword) {
             event.preventDefault(); // Отмена отправки
             alert("Пароли не совпадают!");
-        }
-    });
-});
-
+          }
+        });
+      });
     </script>
-    
+
     <script>
       document
         .querySelector(".reg-form")
@@ -132,6 +133,16 @@
             alert("Пароли не совпадают!");
           }
         });
+    </script>
+    <!-------------------------------------------Adaptation -->
+    <script>
+      function adjustWidth() {
+        const element = document.querySelector(".element");
+        element.style.width = window.innerWidth + "px"; // Устанавливаем ширину в пикселях
+      }
+
+      window.addEventListener("resize", adjustWidth); // Пересчитываем при изменении окна
+      window.addEventListener("load", adjustWidth); // Запускаем при загрузке страницы
     </script>
   </body>
 </html>
