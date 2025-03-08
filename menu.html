@@ -16,7 +16,6 @@
   <body>
     <main>
       <div class="content__box">
-        
         <img
           class="page-one-img"
           src="./img/menu-page-img/background for menu page.webp"
@@ -39,27 +38,27 @@
           class="soldier-img"
         />
         <div class="monitor__wrapper">
-        <span class="mini-monitor">Make your choice for today</span>
-        <nav class="main__nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="squat.html" class="btn">Squat</a>
-            </li>
-            <li class="nav__item">
-              <a href="benchpress.html" class="btn">Bench press</a>
-            </li>
-            <li class="nav__item">
-              <a href="deadlift.html" class="btn">Deadlift</a>
-            </li>
-            <li class="nav__item">
-              <button class="btn">Full instructions</button>
-            </li>
-            <li class="nav__item">
-              <a href="./index.html" class="btn">Back</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+          <span class="mini-monitor">Make your choice for today</span>
+          <nav class="main__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="squat.html" class="btn">Squat</a>
+              </li>
+              <li class="nav__item">
+                <a href="benchpress.html" class="btn">Bench press</a>
+              </li>
+              <li class="nav__item">
+                <a href="deadlift.html" class="btn">Deadlift</a>
+              </li>
+              <li class="nav__item">
+                <button class="btn">Full instructions</button>
+              </li>
+              <li class="nav__item">
+                <a href="./index.html" class="btn">Back</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </main>
     <footer>
@@ -68,25 +67,26 @@
         <a href="pavel-mironov@outlook.com" class="footer--mail">Contacts</a>
       </div>
     </footer>
-    <script>document.addEventListener("DOMContentLoaded", () => {
-      const textElement = document.querySelector(".mini-monitor");
-      const textToType = "Make your choice for today";
-      let index = 0;
-    
-      // Показываем элемент перед началом печати
-      textElement.style.visibility = "visible";
-      textElement.textContent = "";
-    
-      const typewriterEffect = () => {
-        if (index < textToType.length) {
-          textElement.textContent += textToType[index];
-          index++;
-          setTimeout(typewriterEffect, 150);
-        }
-      };
-    
-      // Начинаем печатать через 3 секунды
-      setTimeout(typewriterEffect, 1000);
-    });</script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const textElement = document.querySelector(".mini-monitor");
+        const textToType = "Make your choice for today";
+        let index = 0;
+
+        textElement.style.visibility = "visible";
+        textElement.textContent = "";
+
+        const typewriterEffect = () => {
+          if (index < textToType.length) {
+            textElement.textContent += textToType[index];
+            index++;
+            setTimeout(typewriterEffect, 150);
+          }
+        };
+
+        // Начинаем печатать через 3 секунды
+        setTimeout(typewriterEffect, 1000);
+      });
+    </script>
   </body>
 </html>

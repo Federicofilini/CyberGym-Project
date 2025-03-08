@@ -23,6 +23,7 @@ main {
   position: relative;
   margin: 0 auto;
   width: 100%;
+  
 }
 .content__box {
   position: relative;
@@ -45,7 +46,7 @@ main {
 
 .page-one-img {
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 .banner-img {
   position: absolute;
@@ -58,7 +59,7 @@ main {
 /* --------------------------------------------------------------------Main buttons form */
 .main-page-btn__box {
   position: absolute;
-  top: 34.5%;
+  top: 30%;
   width: 51%;
   min-height: 38%;
   display: flex;
@@ -210,7 +211,7 @@ main {
   gap: 8px;
 }
 .mini-monitor {
-    visibility: hidden;
+  visibility: hidden;
   position: absolute;
   top: 11%;
   left: 30%;
@@ -232,7 +233,7 @@ main {
 .women-img {
   position: absolute;
   top: 68px;
-  left: 270px;
+  left: 276px;
   width: 60px;
   height: 75px;
   object-fit: contain;
