@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/favicono.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cyber Gym</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="content__box">
+        <img
+          class="page-one-img"
+          src="./img/main-background.webp"
+          alt="View into outer space through the porthole"
+        />
+        <img src="./img/banner.jpg" alt="banner" class="banner-img" />
+        <h2>Welcome to cyber gym</h2>
+        <div class="main-page-btn__box">
+          <a href="#" class="btn" id="intranceBtn">Intrance</a>
+          <button class="btn" id="registrationBtn">Registration</button>
+        </div>
+        <form action="server.php" method="POST" class="reg-form">
+          <label for="niсk-field">Your nickname</label>
+          <input
+            type="text"
+            class="reg-form__input"
+            id="niсk-field"
+            name="nickname"
+            required
+            minlength="3"
+            maxlength="20"
+          />
+
+          <label for="email-field">Your email</label>
+          <input
+            type="email"
+            class="reg-form__input"
+            id="email-field"
+            name="email"
+            required
+            autocomplete="off"
+          />
+
+          <label for="password-field">Password</label>
+          <input
+            type="password"
+            class="reg-form__input"
+            id="password-field"
+            name="password"
+            required
+            minlength="4"
+          />
+          <input type="text" name="honeypot" style="display: none" />
+          <label for="conf-password-field">Confirm Password</label>
+          <input
+            type="password"
+            class="reg-form__input"
+            id="conf-password-field"
+            name="confirm_password"
+            required
+          />
+
+          <button type="submit" class="btn">Activation</button>
+          <button
+            class="close-form__btn btn"
+            type="button"
+            id="close-reg-form-btn"
+          >
+            c
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+    <script>
+     document.addEventListener("DOMContentLoaded", () => {
+    const regForm = document.querySelector(".reg-form"); // Форма
+    const regButton = document.getElementById("registrationBtn"); // Кнопка "Registration"
+    const closeButton = document.getElementById("close-reg-form-btn"); // Кнопка закрытия
+    const buttonsBox = document.querySelector(".main-page-btn__box"); // Блок кнопок
+
+    // Функция для показа формы
+    function showForm() {
+        regForm.classList.add("show"); // Показываем форму
+        buttonsBox.style.display = "none"; // Скрываем кнопки
+    }
+
+    // Функция для скрытия формы
+    function hideForm() {
+        regForm.classList.remove("show"); // Скрываем форму
+        buttonsBox.style.display = "flex"; // Показываем кнопки
+    }
+
+    // Назначаем обработчики событий
+    regButton.addEventListener("click", showForm);
+    closeButton.addEventListener("click", hideForm);
+
+    // Валидация паролей перед отправкой формы
+    regForm.addEventListener("submit", (event) => {
+        let password = document.getElementById("password-field").value;
+        let confirmPassword = document.getElementById("conf-password-field").value;
+
+        if (password !== confirmPassword) {
+            event.preventDefault(); // Отмена отправки
+            alert("Пароли не совпадают!");
+        }
+    });
+});
+
+    </script>
+    
+    <script>
+      document
+        .querySelector(".reg-form")
+        .addEventListener("submit", function (event) {
+          let password = document.getElementById("password-field").value;
+          let confirmPassword = document.getElementById(
+            "conf-password-field"
+          ).value;
+
+          if (password !== confirmPassword) {
+            event.preventDefault(); // Отмена отправки
+            alert("Пароли не совпадают!");
+          }
+        });
+    </script>
+  </body>
+</html>
