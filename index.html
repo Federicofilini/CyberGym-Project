@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <header></header>
     <main>
       <div class="content__box">
         <img
@@ -28,11 +27,31 @@
           <a href="#" class="btn" id="intranceBtn">Entrance</a>
           <button class="btn" id="registrationBtn">Registration</button>
         </div>
+
+        <form action="server.php" method="post" class="verification-form">
+          <label for="verif-nickname-form__input">Nickname</label>
+          <input
+            type="text"
+            class="form__input"
+            id="verif-nickname-form__input"
+            required
+          />
+
+          <label for="verif-password-form__input">Password</label>
+          <input
+            type="password"
+            class="form__input"
+            id="verif-password-form__input "
+            required
+          />
+          <button class="btn">Entrance</button>
+        </form>
+
         <form action="server.php" method="POST" class="reg-form">
           <label for="niсk-field">Your nickname</label>
           <input
             type="text"
-            class="reg-form__input"
+            class="form__input"
             id="niсk-field"
             name="nickname"
             required
@@ -43,7 +62,7 @@
           <label for="email-field">Your email</label>
           <input
             type="email"
-            class="reg-form__input"
+            class="form__input"
             id="email-field"
             name="email"
             required
@@ -53,7 +72,7 @@
           <label for="password-field">Password</label>
           <input
             type="password"
-            class="reg-form__input"
+            class="form__input"
             id="password-field"
             name="password"
             required
@@ -63,7 +82,7 @@
           <label for="conf-password-field">Confirm Password</label>
           <input
             type="password"
-            class="reg-form__input"
+            class="form__input"
             id="conf-password-field"
             name="confirm_password"
             required
@@ -81,10 +100,10 @@
       </div>
     </main>
     <footer>
-        <div class="footer__content--box">
-            <h3>All rights belong to Pavel Mironov</h3>
-            <a href="pavel-mironov@outlook.com" class="footer--mail">My contacts</a>
-        </div>
+      <div class="footer__content--box">
+        <h3>All rights belong to Pavel Mironov</h3>
+        <a href="pavel-mironov@outlook.com" class="footer--mail">My contacts</a>
+      </div>
     </footer>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
