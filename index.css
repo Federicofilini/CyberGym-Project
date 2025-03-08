@@ -59,7 +59,7 @@ main {
 /* --------------------------------------------------------------------Main buttons form */
 .main-page-btn__box {
   position: absolute;
-  top: 30%;
+  top: 34%;
   width: 51%;
   min-height: 38%;
   display: flex;
@@ -107,7 +107,7 @@ main {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 50.8%;
+  top: 56.8%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
   display: flex;
