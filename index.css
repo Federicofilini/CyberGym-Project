@@ -78,7 +78,7 @@ main {
 
 /* -------------------------------------------------------------------------Registration form */
 .reg-form {
-  width: 31%;
+  width: 51%;
   visibility: hidden;
   opacity: 0;
   position: absolute;
