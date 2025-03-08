@@ -9,7 +9,7 @@
 }
 body {
   margin: 0 auto;
-  max-width: 435px;
+  max-width: 420px;
   position: relative;
 
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
@@ -36,7 +36,7 @@ main {
   position: absolute;
   top: 160px;
   left: 110px;
-  font-size: clamp(6px,10vw, 16px);
+  font-size: clamp(6px,3.5vw, 16px);
   font-weight: 500;
   color: #39e0fa;
   text-shadow: 0 0 5px #39e0fa, 0 0 10px #39e0fa, 0 0 20px #39e0fa;
