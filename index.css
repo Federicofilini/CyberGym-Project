@@ -106,7 +106,7 @@ main {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 58.8%;
+  top: 50.8%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
   display: flex;
@@ -142,6 +142,8 @@ main {
   padding: 5px 30px;
   color: #39e0fab4;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
+  text-wrap: nowrap;
+  font-size: 10px;
   margin: 0 auto;
   width: 90%;
   letter-spacing: 1px;
@@ -189,29 +191,32 @@ main {
 }
 
 /* ---------------------------------------------------------------------------------------Menu page */
+.monitor__wrapper {
+  border: 1px solid #5fe7fc;
+}
 .main__nav {
-    
   position: absolute;
   padding: 5px;
-  top: 15%;
+  top: 17.1%;
   left: 30%;
   width: 40%;
   background-color: rgba(0, 0, 0, 0.478);
   backdrop-filter: blur(1px);
   z-index: 1;
 }
-.nav__list{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .mini-monitor {
+    visibility: hidden;
   position: absolute;
-  top: 9%;
+  top: 11%;
   left: 30%;
   width: 40%;
   height: 39px;
-  padding: 5px;
+  padding: 5px 3px 5px 10px;
   background-color: rgba(0, 0, 0, 0.478);
   backdrop-filter: blur(1px);
   z-index: 1;
@@ -230,21 +235,20 @@ main {
   left: 270px;
   width: 60px;
   height: 75px;
-  object-fit:contain;
+  object-fit: contain;
   transform: rotate(90deg);
   border-radius: 5px;
 }
 
-
-.soldier-img{
-    position: absolute;
+.soldier-img {
+  position: absolute;
   top: 73px;
   left: 26px;
   width: 83px;
   height: 190px;
-  object-fit:fill;
+  object-fit: fill;
   border: 1px solid transparent;
- border-radius: 5px;
+  border-radius: 5px;
 }
 
 /* ------------------------------------------------------------------------------------Footer */
