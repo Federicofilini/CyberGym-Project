@@ -166,6 +166,17 @@ textarea {
 select {
   cursor: pointer;
 }
-summary, details{
+summary, details,input, textarea{
   outline: none;
+}
+input[type="number"] {
+  -webkit-appearance: none; /* для WebKit */
+  -moz-appearance: textfield; /* для Firefox */
+  appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

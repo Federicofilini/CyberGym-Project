@@ -11,21 +11,16 @@ body {
   margin: 0 auto;
   max-width: 375px;
   position: relative;
-
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 500;
   color: #39e0fa;
   letter-spacing: 1px;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
 }
-main {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  
-}
+
 .content__box {
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -35,40 +30,41 @@ main {
 .content__box h2 {
   font-family: "Orbitron";
   position: absolute;
-  top: 160px;
-  left: 100px;
-  font-size: clamp(10px, 3.5vw, 16px);
+  top: 6rem;
+  left: 25%;
+  font-size: clamp(10px, 1rem, 14px);
   font-weight: 500;
   color: #39e0fa;
   text-shadow: 0 0 5px #39e0fa, 0 0 10px #39e0fa, 0 0 20px #39e0fa;
   animation: neonFlicker 3s infinite alternate;
 }
 
-.page-one-img {
+.page-img {
   width: 100%;
-  height: auto;
+  
+  filter: blur(1px);
+  object-fit: cover;
 }
 .banner-img {
   position: absolute;
-  top: 125px;
+  top: 4rem;
   max-width: 97%;
   height: 100px;
-
   border-radius: 20px;
 }
 /* --------------------------------------------------------------------Main buttons form */
 .main-page-btn__box {
   position: absolute;
-  top: 34%;
+  top: 13rem;
+  left: 5.8rem;
   width: 51%;
   min-height: 38%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
   background-color: rgba(0, 0, 0, 0.478);
-  backdrop-filter: blur(1px);
-  padding: 24px;
+  padding: 0.5rem;
   border: 1px solid transparent;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -77,6 +73,12 @@ main {
   border: 1px solid #39e0fa;
   box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
 }
+
+
+
+
+
+
 /* ----------------------------------------------------------------------------Verification form */
 .verification-form {
   visibility: hidden;
@@ -152,6 +154,7 @@ main {
   border-radius: 2px;
   transition: all 0.3s ease;
   cursor: pointer;
+  margin-bottom: 3%;
 }
 .btn:hover {
   border: 1px solid #39e0fa;
@@ -169,87 +172,169 @@ main {
   outline: none;
   background-color: transparent;
   border: 1px solid #27b2c7;
+  padding: 3px;
   color: #5fe7fc;
   text-shadow: 0 0 2px #02ddff, 0 0 5px #02ddff;
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 1px;
-  margin-bottom: 15px;
+  margin-bottom: 5%;
 }
 .form__input:last-of-type {
   margin-bottom: 30px;
 }
-.form__input:hover {
+input:hover {
+ 
   box-shadow: inset 0 0 3px #02ddff, 0 0 5px #02ddff;
 }
-.form__input:valid {
+input:valid {
   box-shadow: inset 0 0 3px #02ddff, 0 0 5px #02ddff;
 }
-.form__input:user-invalid {
+input:user-invalid {
   border: 1px solid #ff6c0a;
   box-shadow: 0 0 3px #ff6c0a, 0 0 5px #ff6c0a;
 }
 
 /* ---------------------------------------------------------------------------------------Menu page */
-.monitor__wrapper {
-  border: 1px solid #5fe7fc;
+.menu-content__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.main__nav {
+.menu-nav {
   position: absolute;
-  padding: 5px;
-  top: 17.1%;
+  top: 8.6rem;
   left: 30%;
   width: 40%;
-  background-color: rgba(0, 0, 0, 0.478);
+  background-color: rgba(0, 0, 0, 0.255);
   backdrop-filter: blur(1px);
   z-index: 1;
 }
-.nav__list {
+.menu-nav__list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  padding: 1% 0px;
+  font-size: 1rem;
+  border: 1px solid #39e0fa78;
+  box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
+}
+.menu-nav__item {
+  margin-bottom: 3%;
+}
+.nav__list:hover {
+  border: 1px solid #39e0fa;
 }
 .mini-monitor {
   visibility: hidden;
   position: absolute;
-  top: 11%;
-  left: 30%;
-  width: 40%;
-  height: 39px;
-  padding: 5px 3px 5px 10px;
+  top: 5rem;
+  left: 7.3rem;
+  width: 38%;
+  height: 6%;
+  padding: 1%;
+  border: 1px solid #5fe7fc;
+  border-radius: 2px;
+  box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
   background-color: rgba(0, 0, 0, 0.478);
   backdrop-filter: blur(1px);
+  font-size: 0.6rem;
   z-index: 1;
 }
+
 .monitor-img {
   position: absolute;
-  top: 50px;
-  max-width: 99%;
-  height: 270px;
-  border-radius: 20px;
+  top: 3.5rem;
+  width: 100%;
+
+  border-radius: 8%;
 }
 
 .women-img {
   position: absolute;
-  top: 68px;
-  left: 276px;
-  width: 60px;
-  height: 75px;
+  top: 4.8rem;
+  left: 16.9rem;
+  width: 19.9%;
+  height: auto;
   object-fit: contain;
   transform: rotate(90deg);
   border-radius: 5px;
+  z-index: 2;
+  border: 1px solid #5fe7fc;
 }
 
 .soldier-img {
   position: absolute;
-  top: 73px;
-  left: 26px;
+  top: 5rem;
+  left: 1.5rem;
   width: 83px;
-  height: 190px;
+  height: 180px;
   object-fit: fill;
   border: 1px solid transparent;
   border-radius: 5px;
+  border: 1px solid #5fe7fc;
+}
+/* -------------------------------------------------------------------Squat */
+.trenning-list {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 70%;
+  padding: 4% 4% 4% 10% ;
+  background-color: rgba(0, 0, 0, 0.632);
+ 
+  border: 1px solid #39e0fa;
+  font-size: 0.7rem;
+  
+}
+.trenning-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.input-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  width: 100%;
+}
+
+.input-value {
+  width: 20%;
+  padding: 1px 2px;
+  border: 1px solid #39e0fa;
+  border-radius: 3px;
+  background-color: rgba(44, 42, 42, 0.501);
+  color:#27b2c7;
+}
+.total-input{
+  width: 35%;
+  
+}
+.trenning-list__textarea{
+  width: 90%;
+  height: 5rem;
+  color: #5fe7fc;
+  margin-top: 25%;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
+}
+.squat-last-resalt{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 40%;
+  left: 0;
+  padding: 1%;
+  width: 60%;
+  margin-left: 5rem;
+  border: 1px solid #39e0fa;
+  border-radius: 3px;
+  font-size: 0.6em;
 }
 
 /* ------------------------------------------------------------------------------------Footer */
@@ -261,14 +346,23 @@ footer {
   padding: 20px;
   width: 100%;
   max-width: 450px;
-  height: 30px;
+  height: 3%;
   font-family: "Ethnocentric";
   font-size: 6px;
 }
 .footer__content--box {
+  text-align: center;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+}
+.footer__link {
+  margin-left: 5px;
+}
+.footer__link:hover {
+  border-bottom: 1px solid #39e0fa;
+  color: #7be1f1;
+}
+.footer__link:active {
+  transform: scale(0.9);
 }
 
 /* ------------------------------------------------------------------------------------Animation */
@@ -308,5 +402,41 @@ footer {
   100% {
     opacity: 1;
     text-shadow: 0 0 5px #39e0fa, 0 0 10px #39e0fa, 0 0 20px #39e0fa;
+  }
+}
+@media screen and (max-width: 380px) {
+  .content__box h2 {
+    font-size: clamp(10px, 1rem, 12px);
+    left: 29%;
+  }
+  .women-img {
+    left: 17rem;
+  }
+  .mini-monitor {
+    font-size: 0.5rem;
+  }
+  
+}
+@media screen and (max-width: 350px) {
+  .content__box h2 {
+    font-size: clamp(10px, 1rem, 11px);
+    left: 27%;
+  }
+  .women-img {
+    left: 15.9rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .women-img {
+    left: 16.7rem;
+  }
+  .mini-monitor {
+    font-size: 0.6rem;
+    left: 6.4rem;
+  }
+  .soldier-img {
+    top: 5rem;
+    left: 1.3rem;
+    width: 23%;
   }
 }

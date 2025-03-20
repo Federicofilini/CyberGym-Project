@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/favicono.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Squat</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="content__box">
+        <img
+          class="page-img"
+          src="./img/squat-img/one.webp"
+          alt="image of a gym"
+          width="375"
+          height="650"
+        />
+
+        <form action="#" method="post">
+          <ol class="trenning-list">
+            <li class="trenning-list__item">
+              <div class="input-wrapper">
+                <label for="weight-one">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="weight-one"
+                  name="weight-one"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="reps-one">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="reps-one"
+                  name="reps-one"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trenning-list__item">
+              <div class="input-wrapper">
+                <label for="weight-two">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="weight-two"
+                  name="weight-two"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="reps-two">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="reps-two"
+                  name="reps-two"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trenning-list__item">
+              <div class="input-wrapper">
+                <label for="weight-three">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="weight-three"
+                  name="weight-three"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="reps-three">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="reps-three"
+                  name="reps-three"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trenning-list__item">
+              <div class="input-wrapper">
+                <label for="weight-four">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="weight-four"
+                  name="weight-four"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="reps-four">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="reps-four"
+                  name="reps-four"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trenning-list__item">
+              <div class="input-wrapper">
+                <label for="weight-five">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="weight-five"
+                  name="weight-five"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="reps-five">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="reps-five"
+                  name="reps-five"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trenning-list__item">
+              <div class="input-wrapper">
+                <label for="weight-six">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="weight-six"
+                  name="weight-six"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="reps-six">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="reps-six"
+                  name="reps-six"
+                />
+              </div>
+            </li>
+
+            <li class="trenning-list__item">
+              <div class="input-wrapper">
+                <label for="weight-seven">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="weight-seven"
+                  name="weight-seven"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="reps-seven">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="reps-seven"
+                  name="reps-seven"
+                />
+              </div>
+            </li>
+            <li class="trenning-list__item">
+              <div class="input-wrapper">
+                <label for="squatWeightTotal">Total</label>
+                <input
+                  class="input-value total-input"
+                  type="number"
+                  id="squatWeightTotal"
+                  name="squatWeightTotal"disabled
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="squatRepsTotal">Total</label>
+                <input
+                  class="input-value total-input"
+                  type="number"
+                  id="squatRepsTotal"
+                  name="squatRepsTotal"disabled
+                />
+              </div>
+            </li>
+
+            <li class="trenning-list__item">
+              <textarea
+                class="input-value trenning-list__textarea"
+                name="textDescription"
+                id="textDescription" >Feelings from training</textarea>
+            </li>
+
+            <li><button class="btn" type="submit">Сomplete</button></li>
+            <li><a href="./menu.html" class="btn">Back</a></li>
+          </ol>
+        </form>
+        <div class="input-wrapper squat-last-resalt">
+          <h3>Last resalt</h3>
+          <span class="input-value total-input" id="squatLastWeight">0</span>
+          <span class="input-value total-input" id="squatLastReps">0</span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__content--box">
+        <h3>
+          All rights belong to<a href="#" class="footer__link">Pavel Mironov</a>
+        </h3>
+      </div>
+    </footer>
+    
+
+    <script>
+      const textarea = document.getElementById("textDescription");
+
+      
+      textarea.addEventListener("focus", () => {
+        if (textarea.value === "Feelings from training") {
+          textarea.value = ""; // Очистка содержимого
+        }
+      });
+
+      // Если пользователь покинул поле и ничего не ввел, возвращаем описание
+      textarea.addEventListener("blur", () => {
+        if (textarea.value.trim() === "") {
+          textarea.value = "Feelings from training";
+        }
+      });
+    </script>
+  </body>
+</html>
