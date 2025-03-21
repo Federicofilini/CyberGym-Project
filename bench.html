@@ -24,7 +24,7 @@
           height="650"
         />
 
-        <form action="#" method="post">
+        <form action="#" method="post" id="benchForm">
           <ol class="trenning-list">
             <h2 class="trenning-list__header">Bench Press</h2>
 
@@ -208,15 +208,20 @@
             <li class="trenning-list__item item-nine">
               <div class="last-resalt">
                 <h3>Last resalt</h3>
-                <span class="input-value total-input" id="squatLastWeight"
+                <span class="input-value total-input" id="benchLastWeight"
                   >0</span
                 >
-                <span class="input-value total-input" id="squatLastReps"
+                <span class="input-value total-input" id="benchLastReps"
                   >0</span
                 >
               </div>
             </li>
             <li class="trenning-list__item">
+              <img
+                class="trenning-monitor"
+                src="./img/soldiertwo.webp"
+                alt="soldier"
+              />
               <textarea
                 class="input-value trenning-list__textarea"
                 name="feelingsDescription"
@@ -314,5 +319,7 @@ Feelings from training</textarea
         input.addEventListener("input", countWeight);
       });
     </script>
+
+    
   </body>
 </html>
