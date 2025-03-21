@@ -339,6 +339,15 @@ input:user-invalid {
   font-size: 0.8em;
 }
 
+.trenning-monitor{
+  width: 21%;
+  margin: 0px 7% 6% 0px;
+  border: 1px solid #39e0fa;
+  box-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff;
+  border-radius: 3px;
+  object-fit:cover;
+}
+
 /* ------------------------------------------------------------------------------------Footer */
 footer {
   position: absolute;
