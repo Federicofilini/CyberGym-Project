@@ -276,6 +276,7 @@ input:user-invalid {
   text-align: center;
   font-size: 2em;
   margin-bottom: 50px;
+  text-wrap: nowrap;
 }
 
 .trenning-list {
@@ -326,6 +327,7 @@ input:user-invalid {
   color: #5fe7fc;
   margin-top: 2%;
   margin-bottom: 20px;
+  margin-right: 6%;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
 }
 .last-resalt {
@@ -341,8 +343,8 @@ input:user-invalid {
 }
 
 .trenning-monitor{
-  width: 21%;
-  margin: 0px 7% 6% 0px;
+  width: 20%;
+  margin: 0px 7% 4% 0px;
   border: 1px solid #39e0fa;
   box-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff;
   border-radius: 3px;
