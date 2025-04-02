@@ -1,4 +1,3 @@
-
 @import url(./reset.css);
 @font-face {
   font-family: "Crysis";
@@ -18,6 +17,9 @@ body {
   color: #39e0fa;
   letter-spacing: 1px;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
+}
+label{
+  font-size: 0.8rem;
 }
 
 .content__box {
@@ -138,19 +140,19 @@ body {
 .btn {
   display: flex;
   justify-content: center;
-  padding: 5px 30px;
+  padding: 6px 20px;
   color: #39e0fab4;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
   text-wrap: nowrap;
   font-size: 10px;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
   letter-spacing: 1px;
   border: 1px solid #27b2c7;
   border-radius: 2px;
   transition: all 0.3s ease;
   cursor: pointer;
-  margin-bottom: 3%;
+  margin-bottom: 4%;
 }
 .btn:hover {
   border: 1px solid #39e0fa;
@@ -163,6 +165,12 @@ body {
   right: 5px;
   width: min-content;
   padding: 1px;
+}
+.form-btn {
+  width: 58%;
+}
+.button-wripper {
+  margin:0  auto;
 }
 .form__input {
   outline: none;
@@ -200,7 +208,7 @@ input:user-invalid {
 }
 .menu-nav {
   position: absolute;
-  top: 8.6rem;
+  top: 8.5rem;
   left: 30%;
   width: 40%;
   background-color: rgba(0, 0, 0, 0.255);
@@ -215,9 +223,7 @@ input:user-invalid {
   border: 1px solid #39e0fa78;
   box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
 }
-.menu-nav__item {
-  margin-bottom: 3%;
-}
+
 .nav__list:hover {
   border: 1px solid #39e0fa;
 }
@@ -272,22 +278,27 @@ input:user-invalid {
 }
 /* -------------------------------------------------------------------Squat */
 
-.trenning-list__header {
+.trainning-list__header {
   text-align: center;
   font-size: 2em;
   margin-bottom: 50px;
   text-wrap: nowrap;
 }
+.trainning-list__btn {
+  width: 200px;
+}
 
-.trenning-list {
+.trainning-list {
   position: absolute;
   top: 2%;
   left: 50%;
+  width: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   transform: translate(-50%);
-  width: 100%;
+  z-index: 2;
 
   padding: 4%;
   background-color: rgba(0, 0, 0, 0.632);
@@ -295,17 +306,29 @@ input:user-invalid {
   border: 1px solid #39e0fa;
   font-size: 0.7rem;
 }
-.trenning-list__item {
+.trainning-list__item {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
 }
+.exercise-form {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
 .input-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10%;
   width: 100%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .input-value {
@@ -318,10 +341,10 @@ input:user-invalid {
 }
 .total-input {
   display: flex;
-  align-items: center;
+align-items: center;
   width: 35%;
 }
-.trenning-list__textarea {
+.trainning-list__textarea {
   width: 200px;
   height: 9rem;
   color: #5fe7fc;
@@ -330,7 +353,7 @@ input:user-invalid {
   margin-right: 6%;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
 }
-.last-resalt {
+.last-result {
   display: flex;
   justify-content: space-between;
   gap: 6%;
@@ -342,15 +365,23 @@ input:user-invalid {
   font-size: 0.8em;
 }
 
-.trenning-monitor{
-  width: 20%;
+.trainning-monitor {
+  width: 25%;
+  height: 80%;
   margin: 0px 7% 4% 0px;
   border: 1px solid #39e0fa;
   box-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff;
   border-radius: 3px;
-  object-fit:cover;
+  object-fit:contain;
 }
-
+.trainning-monitor-two{
+  object-fit: cover;
+}
+.warm-up-text{
+  margin-bottom: 20%;
+  white-space: 1px;
+  line-height:15px ;
+}
 /* ------------------------------------------------------------------------------------Footer */
 footer {
   position: absolute;
@@ -425,7 +456,7 @@ footer {
   .mini-monitor {
     font-size: 0.5rem;
   }
-  .trenning-list__header {
+  .trainning-list__header {
     width: 20%;
     font-size: 2em;
     margin-bottom: 10%;

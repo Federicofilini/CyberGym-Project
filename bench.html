@@ -24,216 +24,929 @@
           height="650"
         />
 
-        <form action="#" method="post" id="benchForm">
-          <ol class="trenning-list">
-            <h2 class="trenning-list__header">Bench Press</h2>
+        <div class="trainning-list-wrapper" id="trainningList">
+          <nav class="trainning-list-nav">
+            <ul class="trainning-list">
+              <li class="menu-nav__item">
+                <h2 class="trainning-list__header">Trainning list</h2>
+              </li>
 
-            <li class="trenning-list__item">
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="warmUpForm"
+                >
+                  Warm-Up
+                </button>
+              </li>
+
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="squatForm"
+                >
+                  Squat
+                </button>
+              </li>
+
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="shrugsForm"
+                >
+                  Shrugs
+                </button>
+              </li>
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="LegExtension"
+                >
+                  leg extension
+                </button>
+              </li>
+
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="pulldownsForm"
+                >
+                  Pulldowns
+                </button>
+              </li>
+
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="dumbbellRowForm"
+                >
+                  One-arm dumbbell row
+                </button>
+              </li>
+
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="crunchesForm"
+                >
+                  Crunches and Cool-down
+                </button>
+              </li>
+              <li class="menu-nav__item">
+                <a
+                  href="./menu.html"
+                  class="btn trainning-list__btn"
+                  id="closeBtn"
+                >
+                  Back
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ------------------------------------------------------------Forms -->
+
+        <form class="exercise-form" id="warmUpForm" action="#" method="post">
+          <div class="trainning-list">
+            <h2 class="trainning-list__header">Warm-Up</h2>
+            <p class="warm-up-text">
+              Lorem ipsum dolor sit amet consecteturCrunches and Cool-down
+              adipisicing elit. Quae consequuntur minima dicta ipsum aliquid
+              consectetur nesciunt iusto error, alias cumque dolor quisquam
+              voluptate. Voluptatum, sequi ea dolor eligendi perspiciatis optio!
+            </p>
+            
+
+            <button
+              type="button"
+              class="btn close-form"
+              data-form-id="warmUpForm"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+
+        <form class="exercise-form" action="#" method="post" id="squatForm">
+          <ul class="trainning-list">
+            <h2 class="trainning-list__header">Squat</h2>
+
+            <li class="trainning-list__item">
               <div class="input-wrapper">
-                <label for="benchWeightOne">Weight</label>
+                <label for="squatWeightOne">Weight</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchWeightOne"
-                  name="benchWeightOne"
+                  id="squatWeightOne"
+                  name="squatWeightOne"
                   required
                 />
               </div>
               <div class="input-wrapper">
-                <label for="benchRepsOne">Reps</label>
+                <label for="squatRapsOne">Reps</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchRepsOne"
-                  name="benchRepsOne"
+                  id="squatRapsOne"
+                  name="squatRapsOne"
                   required
                 />
               </div>
             </li>
-            <li class="trenning-list__item">
+            <li class="trainning-list__item">
               <div class="input-wrapper">
-                <label for="benchWeightTwo">Weight</label>
+                <label for="squatWeightTwo">Weight</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchWeightTwo"
-                  name="benchWeightTwo"
+                  id="squatWeightTwo"
+                  name="squatWeightTwo"
                   required
                 />
               </div>
               <div class="input-wrapper">
-                <label for="benchRepsTwo">Reps</label>
+                <label for="squatRapsTwo">Reps</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchRepsTwo"
-                  name="benchRepsTwo"
-                  required
-                />
-              </div>
-            </li>
-            <li class="trenning-list__item">
-              <div class="input-wrapper">
-                <label for="benchWeightTree">Weight</label>
-                <input
-                  class="input-value"
-                  type="number"
-                  id="benchWeightTree"
-                  name="benchWeightTree"
-                  required
-                />
-              </div>
-              <div class="input-wrapper">
-                <label for="benchRepsThree">Reps</label>
-                <input
-                  class="input-value"
-                  type="number"
-                  id="benchRepsThree"
-                  name="benchRepsThree"
+                  id="squatRapsTwo"
+                  name="squatRapsTwo"
                   required
                 />
               </div>
             </li>
-            <li class="trenning-list__item">
+            <li class="trainning-list__item">
               <div class="input-wrapper">
-                <label for="benchWeightFour">Weight</label>
+                <label for="squatWeightThree">Weight</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchWeightFour"
-                  name="benchWeightFour"
+                  id="squatWeightThree"
+                  name="squatWeightThree"
                   required
                 />
               </div>
               <div class="input-wrapper">
-                <label for="benchRepsFour">Reps</label>
+                <label for="squatRapsThree">Reps</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchRepsFour"
-                  name="benchRepsFour"
-                  required
-                />
-              </div>
-            </li>
-            <li class="trenning-list__item">
-              <div class="input-wrapper">
-                <label for="benchWeightFive">Weight</label>
-                <input
-                  class="input-value"
-                  type="number"
-                  id="benchWeightFive"
-                  name="benchWeightFive"
-                  required
-                />
-              </div>
-              <div class="input-wrapper">
-                <label for="benchRepsFive">Reps</label>
-                <input
-                  class="input-value"
-                  type="number"
-                  id="benchRepsFive"
-                  name="benchRepsFive"
+                  id="squatRapsThree"
+                  name="squatRapsThree"
                   required
                 />
               </div>
             </li>
-            <li class="trenning-list__item">
+            <li class="trainning-list__item">
               <div class="input-wrapper">
-                <label for="benchWeightSix">Weight</label>
+                <label for="squatWeightFour">Weight</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchWeightSix"
-                  name="benchWeightSix"
+                  id="squatWeightFour"
+                  name="squatWeightFour"
                   required
                 />
               </div>
               <div class="input-wrapper">
-                <label for="benchRepsSix">Reps</label>
+                <label for="squatRapsFour">Reps</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchRepsSix"
-                  name="benchRepsSix"
+                  id="squatRapsFour"
+                  name="squatRapsFour"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="squatWeightFive">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="squatWeightFive"
+                  name="squatWeightFive"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="squatRapsFive">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="squatRapsFive"
+                  name="squatRapsFive"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="squatWeightSix">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="squatWeightSix"
+                  name="squatWeightSix"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="squatraipsSix">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="squatraipsSix"
+                  name="squatraipsSix"
                   required
                 />
               </div>
             </li>
 
-            <li class="trenning-list__item">
+            <li class="trainning-list__item">
               <div class="input-wrapper">
-                <label for="benchWeightSeven">Weight</label>
+                <label for="squatWeightSeven">Weight</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchWeightSeven"
-                  name="benchWeightSeven"
+                  id="squatWeightSeven"
+                  name="squatWeightSeven"
                   required
                 />
               </div>
               <div class="input-wrapper">
-                <label for="benchRepsSeven">Reps</label>
+                <label for="squatraipsSeven">Reps</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="benchRepsSeven"
-                  name="benchRepsSeven"
+                  id="squatraipsSeven"
+                  name="squatraipsSeven"
                   required
                 />
               </div>
             </li>
-            <li class="trenning-list__item">
+            <li class="trainning-list__item">
               <div class="input-wrapper">
-                <label for="benchWeightTotal">Total</label>
+                <label for="squatWeightTotal">Total Weight</label>
                 <input
                   class="input-value total-input"
                   type="number"
-                  id="benchWeightTotal"
-                  name="benchWeightTotal"
-                  disabled
-                />
-              </div>
-              <div class="input-wrapper">
-                <label for="benchRepsTotal">Total</label>
-                <input
-                  class="input-value total-input"
-                  type="number"
-                  id="benchRepsTotal"
-                  name="benchRepsTotal"
+                  id="squatWeightTotal"
+                  name="squatWeightTotal"
                   disabled
                 />
               </div>
             </li>
-            <li class="trenning-list__item item-nine">
-              <div class="last-resalt">
-                <h3>Last resalt</h3>
-                <span class="input-value total-input" id="benchLastWeight"
+            <li class="trainning-list__item">
+              <div class="last-result">
+                <h3>Last result</h3>
+                <span class="input-value total-input" id="squatLastWeight"
                   >0</span
                 >
-                <span class="input-value total-input" id="benchLastReps"
+                <span class="input-value total-input" id="squatLastraips"
                   >0</span
                 >
               </div>
             </li>
-            <li class="trenning-list__item">
-              
+            <li class="trainning-list__item">
+              <img
+                class="trainning-monitor"
+                src="./img/soldiertwo.webp"
+                alt="soldier"
+              />
               <textarea
-                class="input-value trenning-list__textarea"
+                class="input-value trainning-list__textarea"
+                name="squatFeelingsDescription"
+                id="squatFeelingsDescription"
+              >
+Feelings from training</textarea
+              >
+            </li>
+
+            <li class="button-wripper">
+              <button class="btn" type="submit">Сomplete</button>
+            </li>
+
+            <li class="button-wripper">
+              <button
+                type="button"
+                class="btn close-form"
+                data-form-id="squatForm"
+              >
+                Close
+              </button>
+            </li>
+          </ul>
+        </form>
+
+        <form class="exercise-form" action="#" method="post" id="shrugsForm">
+          <ul class="trainning-list">
+            <h2 class="trainning-list__header">Shrugs</h2>
+
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="shrugsWeightOne">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="shrugsWeightOne"
+                  name="shrugsWeightOne"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="shrugsRapsOne">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="shrugsRapsOne"
+                  name="shrugsRapsOne"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="shrugsWeightTwo">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="shrugsWeightTwo"
+                  name="shrugsWeightTwo"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="shrugsRapsTwo">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="shrugsRapsTwo"
+                  name="shrugsRapsTwo"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="shrugsWeightThree">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="shrugsWeightThree"
+                  name="shrugsWeightThree"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="shrugsRapsThree">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="shrugsRapsThree"
+                  name="shrugsRapsThree"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="shrugsWeightFour">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="shrugsWeightFour"
+                  name="shrugsWeightFour"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="shrugsRapsFour">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="shrugsRapsFour"
+                  name="shrugsRapsFour"
+                  required
+                />
+              </div>
+            </li>
+
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="shrugsWeightTotal">Total</label>
+                <input
+                  class="input-value total-input"
+                  type="number"
+                  id="shrugsWeightTotal"
+                  name="shrugsWeightTotal"
+                  disabled
+                />
+              </div>
+            </li>
+
+            <li class="trainning-list__item item-nine">
+              <div class="last-result">
+                <h3>Last result</h3>
+                <span class="input-value total-input" id="shrugsLastWeight"
+                  >0</span
+                >
+                <span class="input-value total-input" id="shrugsLastRaps"
+                  >0</span
+                >
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <img
+                class="trainning-monitor"
+                src="./img/soldiertwo.webp"
+                alt="soldier"
+              />
+              <textarea
+                class="input-value trainning-list__textarea"
+                name="shrugsFeelingsDescription"
+                id="shrugsFeelingsDescription"
+              >
+Feelings from training</textarea
+              >
+            </li>
+
+            <li><button class="btn" type="submit">Сomplete</button></li>
+            <li>
+              <button
+                type="button"
+                class="btn close-form"
+                data-form-id="shrugsForm"
+              >
+                Close
+              </button>
+            </li>
+          </ul>
+        </form>
+
+        <form class="exercise-form" action="#" method="post" id="LegExtensionForm">
+          <ul class="trainning-list">
+            <h2 class="trainning-list__header">Leg extension</h2>
+
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="LegExtensionWeightOne">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="LegExtensionWeightOne"
+                  name="LegExtensionWeightOne"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="LegExtensionRapsOne">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="LegExtensionRapsOne"
+                  name="LegExtensionRapsOne"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="LegExtensionWeightTwo">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="LegExtensionWeightTwo"
+                  name="LegExtensionWeightTwo"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="LegExtensionRapsTwo">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="LegExtensionRapsTwo"
+                  name="LegExtensionRapsTwo"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="LegExtensionWeightThree">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="LegExtensionWeightThree"
+                  name="LegExtensionWeightThree"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="LegExtensionRapsThree">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="LegExtensionRapsThree"
+                  name="LegExtensionRapsThree"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="LegExtensionWeightFour">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="LegExtensionWeightFour"
+                  name="LegExtensionWeightFour"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="LegExtensionRapsFour">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="LegExtensionRapsFour"
+                  name="LegExtensionRapsFour"
+                  required
+                />
+              </div>
+            </li>
+
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="LegExtensionWeightTotal">Total</label>
+                <input
+                  class="input-value total-input"
+                  type="number"
+                  id="LegExtensionWeightTotal"
+                  name="LegExtensionWeightTotal"
+                  disabled
+                />
+              </div>
+            </li>
+
+            <li class="trainning-list__item item-nine">
+              <div class="last-result">
+                <h3>Last result</h3>
+                <span class="input-value total-input" id="LegExtensionLastWeight">0</span>
+                <span class="input-value total-input" id="LegExtensionLastRaps">0</span>
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <img
+                class="trainning-monitor"
+                src="./img/soldiertwo.webp"
+                alt="soldier"
+              />
+              <textarea
+                class="input-value trainning-list__textarea"
+                name="LegExtensionFeelingsDescription"
+                id="LegExtensionFeelingsDescription"
+              >
+Feelings from training</textarea
+              >
+            </li>
+
+            <li><button class="btn" type="submit">Сomplete</button></li>
+            <li>
+              <button
+                type="button"
+                class="btn close-form"
+                data-form-id="LegExtensionForm"
+              >
+                Close
+              </button>
+            </li>
+          </ul>
+        </form>
+
+        <form class="exercise-form" action="#" method="post" id="pulldownsForm">
+           <h2 class="trainning-list__header">Pull Downs</h2>
+          <ul class="trainning-list">
+           
+
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="pulldownsWeightOne">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="pulldownsWeightOne"
+                  name="pulldownsWeightOne"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="pulldownsRapsOne">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="pulldownsRapsOne"
+                  name="pulldownsRapsOne"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="pulldownsWeightTwo">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="pulldownsWeightTwo"
+                  name="pulldownsWeightTwo"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="pulldownsRapsTwo">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="pulldownsRapsTwo"
+                  name="pulldownsapsTwo"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="pulldownsWeightThree">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="pulldownsWeightThree"
+                  name="pulldownsWeightThree"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="pulldownsRapsThree">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="pulldownsRapsThree"
+                  name="pulldownsRapsThree"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="pulldownsWeightFour">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="pulldownsWeightFour"
+                  name="pulldownsWeightFour"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="pulldownsRapsFour">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="pulldownsRapsFour"
+                  name="pulldownsRapsFour"
+                  required
+                />
+              </div>
+            </li>
+
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="pulldownsWeightTotal">Total</label>
+                <input
+                  class="input-value total-input"
+                  type="number"
+                  id="pulldownsWeightTotal"
+                  name="pulldownsWeightTotal"
+                  disabled
+                />
+              </div>
+            </li>
+
+            <li class="trainning-list__item item-nine">
+              <div class="last-result">
+                <h3>Last result</h3>
+                <span class="input-value total-input" id="pullDownsLastWeight"
+                  >0</span
+                >
+                <span class="input-value total-input" id="pullDownsLastRaps"
+                  >0</span
+                >
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <img
+                class="trainning-monitor"
+                src="./img/soldiertwo.webp"
+                alt="soldier"
+              />
+              <textarea
+                class="input-value trainning-list__textarea"
                 name="feelingsDescription"
                 id="feelingsDescription"
               >
 Feelings from training</textarea
-              ><img
-              class="trenning-monitor"
-              src="./img/soldier-three.webp"
-              alt="soldier"
-            />
+              >
             </li>
 
             <li><button class="btn" type="submit">Сomplete</button></li>
-            <li><a href="./menu.html" class="btn">Back</a></li>
-          </ol>
+            <li>
+              <button
+                type="button"
+                class="btn close-form"
+                data-form-id="pulldownsForm"
+              >
+                Close
+              </button>
+            </li>
+          </ul>
+        </form>
+
+        <form
+          class="exercise-form"
+          action="#"
+          method="post"
+          id="dumbbellRowForm"
+        >
+          <ul class="trainning-list">
+            <h2 class="trainning-list__header">One-arm dumbbell row</h2>
+
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="dumbbellRowWeightOne">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="dumbbellRowWeightOne"
+                  name="dumbbellRowWeightOne"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="dumbbellRowRapsOne">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="dumbbellRowRapsOne"
+                  name="dumbbellRowRapsOne"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="dumbbellRowWeightTwo">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="dumbbellRowWeightTwo"
+                  name="dumbbellRowWeightTwo"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="dumbbellRowRapsTwo">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="dumbbellRowRapsTwo"
+                  name="dumbbellRowRapsTwo"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="dumbbellRowWeightThree">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="dumbbellRowWeightThree"
+                  name="dumbbellRowWeightThree"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="dumbbellRowRapsThree">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="dumbbellRowRapsThree"
+                  name="dumbbellRowRapsThree"
+                  required
+                />
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="dumbbellRowWeightFour">Weight</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="dumbbellRowWeightFour"
+                  name="dumbbellRowWeightFour"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="dumbbellRowRapsFour">Reps</label>
+                <input
+                  class="input-value"
+                  type="number"
+                  id="dumbbellRowRapsFour"
+                  name="dumbbellRowRapsFour"
+                  required
+                />
+              </div>
+            </li>
+
+            <li class="trainning-list__item">
+              <div class="input-wrapper">
+                <label for="dumbbellRowWeightTotal">Total</label>
+                <input
+                  class="input-value total-input"
+                  type="number"
+                  id="dumbbellRowWeightTotal"
+                  name="dumbbellRowWeightTotal"
+                  disabled
+                />
+              </div>
+            </li>
+
+            <li class="trainning-list__item item-nine">
+              <div class="last-result">
+                <h3>Last result</h3>
+                <span class="input-value total-input" id="dumbbellRowLastWeight"
+                  >0</span
+                >
+                <span class="input-value total-input" id="dumbbellRowLastRaps"
+                  >0</span
+                >
+              </div>
+            </li>
+            <li class="trainning-list__item">
+              <img
+                class="trainning-monitor trainning-monitor-two"
+                src="./img/dumbbell-row.webp"
+                alt="soldier"
+              />
+              <textarea
+                class="input-value trainning-list__textarea"
+                name="dumbbellRowFeelingsDescription"
+                id="dumbbellRowFeelingsDescription"
+              >
+Feelings from training</textarea
+              >
+            </li>
+
+            <li><button class="btn" type="submit">Сomplete</button></li>
+            <li>
+              <button
+                type="button"
+                class="btn close-form"
+                data-form-id="dumbbellRowForm"
+              >
+                Close
+              </button>
+            </li>
+          </ul>
+        </form>
+
+        <form class="exercise-form" action="#" method="post" id="crunchesForm">
+          <div class="trainning-list">
+            <h2 class="trainning-list__header">Crunches and Cool-down</h2>
+            <p class="warm-up-text">
+              Lorem ipsum dolor sit amet consecteturCrunches and Cool-down
+              adipisicing elit. Quae consequuntur minima dicta ipsum aliquid
+              consectetur nesciunt iusto error, alias cumque dolor quisquam
+              voluptate. Voluptatum, sequi ea dolor eligendi perspiciatis optio!
+            </p>
+
+            <button
+              type="button"
+              class="btn close-form"
+              data-form-id="crunchesForm"
+            >
+              Close
+            </button>
+          </div>
         </form>
       </div>
     </main>
@@ -319,6 +1032,7 @@ Feelings from training</textarea
         input.addEventListener("input", countWeight);
       });
     </script>
+    
 
 <script type="module"  src="./index.js"></script>
   </body>
