@@ -63,7 +63,7 @@
                 <button
                   type="button"
                   class="btn form-btn open-form"
-                  data-form-id="LegExtension"
+                  data-form-id="LegExtensionForm"
                 >
                   leg extension
                 </button>
@@ -259,12 +259,12 @@
                 />
               </div>
               <div class="input-wrapper">
-                <label for="squatraipsSix">Reps</label>
+                <label for="squatRapsSix">Reps</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="squatraipsSix"
-                  name="squatraipsSix"
+                  id="squatRapsSix"
+                  name="squatRapsSix"
                   required
                 />
               </div>
@@ -282,12 +282,12 @@
                 />
               </div>
               <div class="input-wrapper">
-                <label for="squatraipsSeven">Reps</label>
+                <label for="squatRapsSeven">Reps</label>
                 <input
                   class="input-value"
                   type="number"
-                  id="squatraipsSeven"
-                  name="squatraipsSeven"
+                  id="squatRapsSeven"
+                  name="squatRapsSeven"
                   required
                 />
               </div>
@@ -633,10 +633,10 @@ Feelings from training</textarea
         </form>
 
         <form class="exercise-form" action="#" method="post" id="pulldownsForm">
-           <h2 class="trainning-list__header">Pull Downs</h2>
+           
           <ul class="trainning-list">
            
-
+            <h2 class="trainning-list__header">Pull Downs</h2>
             <li class="trainning-list__item">
               <div class="input-wrapper">
                 <label for="pulldownsWeightOne">Weight</label>
@@ -676,7 +676,7 @@ Feelings from training</textarea
                   class="input-value"
                   type="number"
                   id="pulldownsRapsTwo"
-                  name="pulldownsapsTwo"
+                  name="pulldownsRapsTwo"
                   required
                 />
               </div>
@@ -1000,55 +1000,52 @@ Feelings from training</textarea
       });
     </script>
 
-    <script>
-      // Обработчики для всех форм
-      function setupWeightCalculations(formId) {
-        const form = document.getElementById(formId);
+<script>
+  // Обработчики для всех форм
+  function setupWeightCalculations(formId, weightName, repsName, totalWeightName) {
+    const form = document.getElementById(formId);
 
-        // Ищем поля веса и повторений внутри формы
-        const weightInputs = form.querySelectorAll(
-          'input[name^="squatWeight"]'
-        );
-        const repsInputs = form.querySelectorAll('input[name^="squatRaps"]');
-        const totalWeightField = form.querySelector(
-          'input[name="squatWeightTotal"]'
-        );
+    // Ищем поля веса и повторений внутри формы
+    const weightInputs = form.querySelectorAll(`input[name^="${weightName}"]`);
+    const repsInputs = form.querySelectorAll(`input[name^="${repsName}"]`);
+    const totalWeightField = form.querySelector(`input[name="${totalWeightName}"]`);
 
-        function calculateTotalWeight() {
-          let total = 0;
+    function calculateTotalWeight() {
+      let total = 0;
 
-          // Перебираем поля веса и повторений парами
-          weightInputs.forEach((weightInput, index) => {
-            const repsInput = repsInputs[index];
-            if (weightInput && repsInput) {
-              const weight = parseFloat(weightInput.value) || 0;
-              const reps = parseFloat(repsInput.value) || 0;
-              total += weight * reps;
-            }
-          });
-
-          // Заполняем итоговое значение в поле Total
-          if (totalWeightField) {
-            totalWeightField.value = total;
-          }
+      // Перебираем поля веса и повторений парами
+      weightInputs.forEach((weightInput, index) => {
+        const repsInput = repsInputs[index];
+        if (weightInput && repsInput) {
+          const weight = parseFloat(weightInput.value) || 0;
+          const reps = parseFloat(repsInput.value) || 0;
+          total += weight * reps;
         }
+      });
 
-        // Навешиваем обработчики на все поля веса и повторений
-        weightInputs.forEach((input) =>
-          input.addEventListener("input", calculateTotalWeight)
-        );
-        repsInputs.forEach((input) =>
-          input.addEventListener("input", calculateTotalWeight)
-        );
+      // Заполняем итоговое значение в поле Total
+      if (totalWeightField) {
+        totalWeightField.value = total;
       }
+    }
 
-      // Добавляем расчёты для всех нужных форм
-      setupWeightCalculations("squatForm");
-      setupWeightCalculations("shrugsForm");
-      setupWeightCalculations("LegExtension");
-      setupWeightCalculations("pulldownsForm");
-      setupWeightCalculations("dumbbellRowForm");
-    </script>
+    // Навешиваем обработчики на все поля веса и повторений
+    weightInputs.forEach((input) =>
+      input.addEventListener("input", calculateTotalWeight)
+    );
+    repsInputs.forEach((input) =>
+      input.addEventListener("input", calculateTotalWeight)
+    );
+  }
+
+  // Добавляем расчёты для всех нужных форм
+  setupWeightCalculations("squatForm", "squatWeight", "squatRaps", "squatWeightTotal");
+  setupWeightCalculations("shrugsForm", "shrugsWeight", "shrugsRaps", "shrugsWeightTotal");
+  setupWeightCalculations("LegExtensionForm", "LegExtensionWeight", "LegExtensionRaps", "LegExtensionWeightTotal");
+  setupWeightCalculations("pulldownsForm", "pulldownsWeight", "pulldownsRaps", "pulldownsWeightTotal");
+  setupWeightCalculations("dumbbellRowForm", "dumbbellRowWeight", "dumbbellRowRaps", "dumbbellRowWeightTotal");
+</script>
+
 
     <script>
       // Находим все textarea

@@ -159,6 +159,11 @@ label{
   color: #39e0fa;
   box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
 }
+.btn:active{
+  border: 1px solid #fefefe;
+  background-color: #32a5ce;
+  transform: scale(0.9);
+}
 .close-form__btn {
   position: absolute;
   top: 5px;
@@ -168,6 +173,8 @@ label{
 }
 .form-btn {
   width: 58%;
+  text-wrap: wrap;
+  line-height: 15px;
 }
 .button-wripper {
   margin:0  auto;
@@ -220,7 +227,7 @@ input:user-invalid {
   flex-direction: column;
   padding: 1% 0px;
   font-size: 1rem;
-  border: 1px solid #39e0fa78;
+  border: 1px solid #88eaf9e9;
   box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
 }
 
@@ -241,6 +248,7 @@ input:user-invalid {
   background-color: rgba(0, 0, 0, 0.478);
   backdrop-filter: blur(1px);
   font-size: 0.6rem;
+  line-height: 13px;
   z-index: 1;
 }
 
@@ -282,7 +290,7 @@ input:user-invalid {
   text-align: center;
   font-size: 2em;
   margin-bottom: 50px;
-  text-wrap: nowrap;
+  
 }
 .trainning-list__btn {
   width: 200px;
