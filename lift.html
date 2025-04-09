@@ -1110,7 +1110,26 @@ Feelings from training</textarea
         });
       });
     </script>
+<script>
+  const elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6"); // Выбираем все p и заголовки
 
+  elements.forEach((element) => {
+    const text = element.textContent;
+    element.textContent = ""; // Очищаем текст элемента
+    let currentIndex = 0;
+    const typingSpeed = 50; // Скорость появления текста (меньше число — быстрее)
+
+    function typeText() {
+      if (currentIndex < text.length) {
+        element.textContent += text[currentIndex];
+        currentIndex++;
+        setTimeout(typeText, typingSpeed);
+      }
+    }
+
+    typeText();
+  });
+</script>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
