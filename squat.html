@@ -24,12 +24,9 @@
           height="650"
         />
         <div class="trainning-list-wrapper" id="trainningList">
+          <h2 class="trainning-list__header">Trainning list</h2>
           <nav class="trainning-list-nav">
             <ul class="trainning-list">
-              <li class="menu-nav__item">
-                <h2 class="trainning-list__header">Trainning list</h2>
-              </li>
-
               <li class="menu-nav__item">
                 <button
                   type="button"
@@ -113,15 +110,14 @@
         <!-- ------------------------------------------------------------Forms -->
 
         <form class="exercise-form" id="warmUpForm" action="#" method="post">
+          <h2 class="trainning-list__header">Warm-Up</h2>
           <div class="trainning-list">
-            <h2 class="trainning-list__header">Warm-Up</h2>
             <p class="warm-up-text">
               Lorem ipsum dolor sit amet consecteturCrunches and Cool-down
               adipisicing elit. Quae consequuntur minima dicta ipsum aliquid
               consectetur nesciunt iusto error, alias cumque dolor quisquam
               voluptate. Voluptatum, sequi ea dolor eligendi perspiciatis optio!
             </p>
-            
 
             <button
               type="button"
@@ -134,9 +130,8 @@
         </form>
 
         <form class="exercise-form" action="#" method="post" id="squatForm">
+          <h2 class="trainning-list__header">Squat</h2>
           <ul class="trainning-list">
-            <h2 class="trainning-list__header">Squat</h2>
-
             <li class="trainning-list__item">
               <div class="input-wrapper">
                 <label for="squatWeightOne">Weight</label>
@@ -347,9 +342,8 @@ Feelings from training</textarea
         </form>
 
         <form class="exercise-form" action="#" method="post" id="shrugsForm">
+          <h2 class="trainning-list__header">Shrugs</h2>
           <ul class="trainning-list">
-            <h2 class="trainning-list__header">Shrugs</h2>
-
             <li class="trainning-list__item">
               <div class="input-wrapper">
                 <label for="shrugsWeightOne">Weight</label>
@@ -491,10 +485,14 @@ Feelings from training</textarea
           </ul>
         </form>
 
-        <form class="exercise-form" action="#" method="post" id="LegExtensionForm">
+        <form
+          class="exercise-form"
+          action="#"
+          method="post"
+          id="LegExtensionForm"
+        >
+          <h2 class="trainning-list__header">Leg extension</h2>
           <ul class="trainning-list">
-            <h2 class="trainning-list__header">Leg extension</h2>
-
             <li class="trainning-list__item">
               <div class="input-wrapper">
                 <label for="LegExtensionWeightOne">Weight</label>
@@ -600,8 +598,14 @@ Feelings from training</textarea
             <li class="trainning-list__item item-nine">
               <div class="last-result">
                 <h3>Last result</h3>
-                <span class="input-value total-input" id="LegExtensionLastWeight">0</span>
-                <span class="input-value total-input" id="LegExtensionLastRaps">0</span>
+                <span
+                  class="input-value total-input"
+                  id="LegExtensionLastWeight"
+                  >0</span
+                >
+                <span class="input-value total-input" id="LegExtensionLastRaps"
+                  >0</span
+                >
               </div>
             </li>
             <li class="trainning-list__item">
@@ -633,10 +637,9 @@ Feelings from training</textarea
         </form>
 
         <form class="exercise-form" action="#" method="post" id="pulldownsForm">
-           
+          <h2 class="trainning-list__header">Pull Downs</h2>
+
           <ul class="trainning-list">
-           
-            <h2 class="trainning-list__header">Pull Downs</h2>
             <li class="trainning-list__item">
               <div class="input-wrapper">
                 <label for="pulldownsWeightOne">Weight</label>
@@ -784,9 +787,8 @@ Feelings from training</textarea
           method="post"
           id="dumbbellRowForm"
         >
+          <h2 class="trainning-list__header">One-arm dumbbell row</h2>
           <ul class="trainning-list">
-            <h2 class="trainning-list__header">One-arm dumbbell row</h2>
-
             <li class="trainning-list__item">
               <div class="input-wrapper">
                 <label for="dumbbellRowWeightOne">Weight</label>
@@ -929,8 +931,8 @@ Feelings from training</textarea
         </form>
 
         <form class="exercise-form" action="#" method="post" id="crunchesForm">
+          <h2 class="trainning-list__header">Crunches and Cool-down</h2>
           <div class="trainning-list">
-            <h2 class="trainning-list__header">Crunches and Cool-down</h2>
             <p class="warm-up-text">
               Lorem ipsum dolor sit amet consecteturCrunches and Cool-down
               adipisicing elit. Quae consequuntur minima dicta ipsum aliquid
@@ -1000,52 +1002,85 @@ Feelings from training</textarea
       });
     </script>
 
-<script>
-  // Обработчики для всех форм
-  function setupWeightCalculations(formId, weightName, repsName, totalWeightName) {
-    const form = document.getElementById(formId);
+    <script>
+      // Обработчики для всех форм
+      function setupWeightCalculations(
+        formId,
+        weightName,
+        repsName,
+        totalWeightName
+      ) {
+        const form = document.getElementById(formId);
 
-    // Ищем поля веса и повторений внутри формы
-    const weightInputs = form.querySelectorAll(`input[name^="${weightName}"]`);
-    const repsInputs = form.querySelectorAll(`input[name^="${repsName}"]`);
-    const totalWeightField = form.querySelector(`input[name="${totalWeightName}"]`);
+        // Ищем поля веса и повторений внутри формы
+        const weightInputs = form.querySelectorAll(
+          `input[name^="${weightName}"]`
+        );
+        const repsInputs = form.querySelectorAll(`input[name^="${repsName}"]`);
+        const totalWeightField = form.querySelector(
+          `input[name="${totalWeightName}"]`
+        );
 
-    function calculateTotalWeight() {
-      let total = 0;
+        function calculateTotalWeight() {
+          let total = 0;
 
-      // Перебираем поля веса и повторений парами
-      weightInputs.forEach((weightInput, index) => {
-        const repsInput = repsInputs[index];
-        if (weightInput && repsInput) {
-          const weight = parseFloat(weightInput.value) || 0;
-          const reps = parseFloat(repsInput.value) || 0;
-          total += weight * reps;
+          // Перебираем поля веса и повторений парами
+          weightInputs.forEach((weightInput, index) => {
+            const repsInput = repsInputs[index];
+            if (weightInput && repsInput) {
+              const weight = parseFloat(weightInput.value) || 0;
+              const reps = parseFloat(repsInput.value) || 0;
+              total += weight * reps;
+            }
+          });
+
+          // Заполняем итоговое значение в поле Total
+          if (totalWeightField) {
+            totalWeightField.value = total;
+          }
         }
-      });
 
-      // Заполняем итоговое значение в поле Total
-      if (totalWeightField) {
-        totalWeightField.value = total;
+        // Навешиваем обработчики на все поля веса и повторений
+        weightInputs.forEach((input) =>
+          input.addEventListener("input", calculateTotalWeight)
+        );
+        repsInputs.forEach((input) =>
+          input.addEventListener("input", calculateTotalWeight)
+        );
       }
-    }
 
-    // Навешиваем обработчики на все поля веса и повторений
-    weightInputs.forEach((input) =>
-      input.addEventListener("input", calculateTotalWeight)
-    );
-    repsInputs.forEach((input) =>
-      input.addEventListener("input", calculateTotalWeight)
-    );
-  }
-
-  // Добавляем расчёты для всех нужных форм
-  setupWeightCalculations("squatForm", "squatWeight", "squatRaps", "squatWeightTotal");
-  setupWeightCalculations("shrugsForm", "shrugsWeight", "shrugsRaps", "shrugsWeightTotal");
-  setupWeightCalculations("LegExtensionForm", "LegExtensionWeight", "LegExtensionRaps", "LegExtensionWeightTotal");
-  setupWeightCalculations("pulldownsForm", "pulldownsWeight", "pulldownsRaps", "pulldownsWeightTotal");
-  setupWeightCalculations("dumbbellRowForm", "dumbbellRowWeight", "dumbbellRowRaps", "dumbbellRowWeightTotal");
-</script>
-
+      // Добавляем расчёты для всех нужных форм
+      setupWeightCalculations(
+        "squatForm",
+        "squatWeight",
+        "squatRaps",
+        "squatWeightTotal"
+      );
+      setupWeightCalculations(
+        "shrugsForm",
+        "shrugsWeight",
+        "shrugsRaps",
+        "shrugsWeightTotal"
+      );
+      setupWeightCalculations(
+        "LegExtensionForm",
+        "LegExtensionWeight",
+        "LegExtensionRaps",
+        "LegExtensionWeightTotal"
+      );
+      setupWeightCalculations(
+        "pulldownsForm",
+        "pulldownsWeight",
+        "pulldownsRaps",
+        "pulldownsWeightTotal"
+      );
+      setupWeightCalculations(
+        "dumbbellRowForm",
+        "dumbbellRowWeight",
+        "dumbbellRowRaps",
+        "dumbbellRowWeightTotal"
+      );
+    </script>
 
     <script>
       // Находим все textarea
@@ -1070,13 +1105,13 @@ Feelings from training</textarea
     </script>
     <script>
       const elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6"); // Выбираем все p и заголовки
-    
+
       elements.forEach((element) => {
         const text = element.textContent;
         element.textContent = ""; // Очищаем текст элемента
         let currentIndex = 0;
         const typingSpeed = 50; // Скорость появления текста (меньше число — быстрее)
-    
+
         function typeText() {
           if (currentIndex < text.length) {
             element.textContent += text[currentIndex];
@@ -1084,7 +1119,7 @@ Feelings from training</textarea
             setTimeout(typeText, typingSpeed);
           }
         }
-    
+
         typeText();
       });
     </script>
