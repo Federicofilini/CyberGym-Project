@@ -18,7 +18,7 @@ body {
   letter-spacing: 1px;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
 }
-label{
+label {
   font-size: 0.8rem;
 }
 
@@ -153,13 +153,14 @@ label{
   transition: all 0.3s ease;
   cursor: pointer;
   margin-bottom: 4%;
+  overflow: hidden;
 }
 .btn:hover {
   border: 1px solid #39e0fa;
   color: #39e0fa;
   box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
 }
-.btn:active{
+.btn:active {
   border: 1px solid #fefefe;
   background-color: #32a5ce;
   transform: scale(0.9);
@@ -177,7 +178,7 @@ label{
   line-height: 15px;
 }
 .button-wripper {
-  margin:0  auto;
+  margin: 0 auto;
 }
 .form__input {
   outline: none;
@@ -287,10 +288,18 @@ input:user-invalid {
 /* -------------------------------------------------------------------Squat */
 
 .trainning-list__header {
+  position: absolute;
+  top: 2.3%;
+  left: 0%;
+  width: 100%;
   text-align: center;
-  font-size: 2em;
-  margin-bottom: 50px;
-  
+  font-size: 1.3em;
+  overflow: hidden;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.545);
+  border: 1px solid #39e0fa;
+  border-collapse: collapse;
+  text-wrap: nowrap;
 }
 .trainning-list__btn {
   width: 200px;
@@ -298,17 +307,17 @@ input:user-invalid {
 
 .trainning-list {
   position: absolute;
-  top: 2%;
+  top: 8%;
   left: 50%;
   width: 100%;
-  height: 90%;
+  height: 85%;
   display: flex;
   flex-direction: column;
 
   transform: translate(-50%);
   z-index: 2;
 
-  padding: 4%;
+  padding: 10% 4% 4%;
   background-color: rgba(0, 0, 0, 0.632);
 
   border: 1px solid #39e0fa;
@@ -349,7 +358,7 @@ input:user-invalid {
 }
 .total-input {
   display: flex;
-align-items: center;
+  align-items: center;
   width: 35%;
 }
 .trainning-list__textarea {
@@ -380,15 +389,15 @@ align-items: center;
   border: 1px solid #39e0fa;
   box-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff;
   border-radius: 3px;
-  object-fit:contain;
+  object-fit: contain;
 }
-.trainning-monitor-two{
+.trainning-monitor-two {
   object-fit: cover;
 }
-.warm-up-text{
+.warm-up-text {
   margin-bottom: 20%;
   white-space: 1px;
-  line-height:15px ;
+  line-height: 15px;
 }
 /* ------------------------------------------------------------------------------------Footer */
 footer {
