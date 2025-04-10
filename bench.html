@@ -119,11 +119,10 @@
           <h2 class="trainning-list__header">Warm-Up</h2>
           <div class="trainning-list">
             <p class="warm-up-text">
-              Lorem ipsum dolor sit amet consecteturcrunchesHyperext and
-              Cool-down adipisicing elit. Quae consequuntur minima dicta ipsum
-              aliquid consectetur nesciunt iusto error, alias cumque dolor
-              quisquam voluptate. Voluptatum, sequi ea dolor eligendi
-              perspiciatis optio!
+              Begin your workout with a 10-15 minute cardio warm-up of your
+              choice, such as using a stationary bike, treadmill, or rowing
+              machine. This warm-up is designed to activate your muscles and
+              prepare your cardiovascular system for the exercise ahead.
             </p>
 
             <button
@@ -332,11 +331,11 @@ Feelings from training</textarea
               >
             </li>
 
-            <li class="button-wripper">
+            <li >
               <button class="btn close-form" type="submit">Сomplete</button>
             </li>
 
-            <li class="button-wripper">
+            <li >
               <button
                 type="button"
                 class="close-form btn"
@@ -956,10 +955,10 @@ Feelings from training</textarea
           <h2 class="trainning-list__header">Crunches and Hyperextensions</h2>
           <div class="trainning-list">
             <p class="warm-up-text">
-              Lorem ipsum dolor sit amet consecteturCrunches and Cool-down
-              adipisicing elit. Quae consequuntur minima dicta ipsum aliquid
-              consectetur nesciunt iusto error, alias cumque dolor quisquam
-              voluptate. Voluptatum, sequi ea dolor eligendi perspiciatis optio!
+              Finish your workout with core-strengthening exercises. Perform
+              abdominal work with either crunches on the floor or leg raises
+              hanging from a bar, and add lower back hyperextensions to round
+              out your routine.
             </p>
 
             <button
@@ -1125,26 +1124,26 @@ Feelings from training</textarea
         "tricepsExtensionWeightTotal"
       );
     </script>
-<script>
-  const elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6"); // Выбираем все p и заголовки
+    <script>
+      const elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6"); // Выбираем все p и заголовки
 
-  elements.forEach((element) => {
-    const text = element.textContent;
-    element.textContent = ""; // Очищаем текст элемента
-    let currentIndex = 0;
-    const typingSpeed = 50; // Скорость появления текста (меньше число — быстрее)
+      elements.forEach((element) => {
+        const text = element.textContent;
+        element.textContent = ""; // Очищаем текст элемента
+        let currentIndex = 0;
+        const typingSpeed = 50; // Скорость появления текста (меньше число — быстрее)
 
-    function typeText() {
-      if (currentIndex < text.length) {
-        element.textContent += text[currentIndex];
-        currentIndex++;
-        setTimeout(typeText, typingSpeed);
-      }
-    }
+        function typeText() {
+          if (currentIndex < text.length) {
+            element.textContent += text[currentIndex];
+            currentIndex++;
+            setTimeout(typeText, typingSpeed);
+          }
+        }
 
-    typeText();
-  });
-</script>
+        typeText();
+      });
+    </script>
     <script type="module" src="./index.js"></script>
   </body>
 </html>

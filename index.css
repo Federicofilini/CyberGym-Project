@@ -17,6 +17,7 @@ body {
   color: #39e0fa;
   letter-spacing: 1px;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
+  border: 1px solid #5fe7fc;
 }
 label {
   font-size: 0.8rem;
@@ -44,8 +45,8 @@ label {
 
 .page-img {
   width: 100%;
+  filter: blur(1px) brightness(0.5);
 
-  filter: blur(1px);
   object-fit: cover;
 }
 .banner-img {
@@ -55,6 +56,7 @@ label {
   height: 100px;
   border-radius: 20px;
 }
+
 /* --------------------------------------------------------------------Main buttons form */
 .main-page-btn__box {
   position: absolute;
@@ -154,6 +156,7 @@ label {
   cursor: pointer;
   margin-bottom: 4%;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.353);
 }
 .btn:hover {
   border: 1px solid #39e0fa;
@@ -177,9 +180,7 @@ label {
   text-wrap: wrap;
   line-height: 15px;
 }
-.button-wripper {
-  margin: 0 auto;
-}
+
 .form__input {
   outline: none;
   background-color: transparent;
@@ -289,17 +290,19 @@ input:user-invalid {
 
 .trainning-list__header {
   position: absolute;
-  top: 2.3%;
+  top: 0;
   left: 0%;
   width: 100%;
   text-align: center;
-  
+
   overflow: hidden;
-  padding: 2%;
-  background-color: rgba(0, 0, 0, 0.545);
-  border: 1px solid #39e0fa;
+  padding: 6% 2% 2%;
+ 
+
+  border-bottom: none;
   border-collapse: collapse;
   text-wrap: nowrap;
+  z-index: 2;
 }
 .trainning-list__btn {
   width: 200px;
@@ -310,7 +313,7 @@ input:user-invalid {
   top: 8%;
   left: 50%;
   width: 100%;
-  height: 85%;
+  height: 85.4%;
   display: flex;
   flex-direction: column;
 
@@ -318,9 +321,8 @@ input:user-invalid {
   z-index: 2;
 
   padding: 10% 4% 4%;
-  background-color: rgba(0, 0, 0, 0.632);
+  
 
-  border: 1px solid #39e0fa;
   font-size: 0.7rem;
 }
 .trainning-list__item {
@@ -398,6 +400,16 @@ input:user-invalid {
   margin-bottom: 20%;
   white-space: 1px;
   line-height: 15px;
+  font-family: "Crysis";
+}
+.trainning-list-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(1px) brightness(0.7);
+  z-index: 1;
 }
 /* ------------------------------------------------------------------------------------Footer */
 footer {
@@ -410,7 +422,9 @@ footer {
   max-width: 450px;
   height: 3%;
   font-family: "Ethnocentric";
-  font-size: 6px;
+  font-size: 0.5rem;
+  
+  z-index: 2;
 }
 .footer__content--box {
   text-align: center;
@@ -474,7 +488,6 @@ footer {
     font-size: 0.5rem;
   }
   .trainning-list__header {
-    
     font-size: 1.3em;
     margin-bottom: 10%;
   }

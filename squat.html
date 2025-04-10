@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <main>
+    <main class="main">
       <div class="content__box">
         <img
           class="page-img"
@@ -110,13 +110,20 @@
         <!-- ------------------------------------------------------------Forms -->
 
         <form class="exercise-form" id="warmUpForm" action="#" method="post">
+          <img
+            class="trainning-list-image"
+            src="./img/333.png"
+            alt=" a girl makes exercise"
+            width="370"
+            height="645"
+          />
           <h2 class="trainning-list__header">Warm-Up</h2>
           <div class="trainning-list">
             <p class="warm-up-text">
-              Lorem ipsum dolor sit amet consecteturCrunches and Cool-down
-              adipisicing elit. Quae consequuntur minima dicta ipsum aliquid
-              consectetur nesciunt iusto error, alias cumque dolor quisquam
-              voluptate. Voluptatum, sequi ea dolor eligendi perspiciatis optio!
+              Begin your workout with a 10-15 minute cardio warm-up of your
+              choice, such as using a stationary bike, treadmill, or rowing
+              machine. This warm-up is designed to activate your muscles and
+              prepare your cardiovascular system for the exercise ahead.
             </p>
 
             <button
@@ -325,11 +332,11 @@ Feelings from training</textarea
               >
             </li>
 
-            <li class="button-wripper">
+            <li>
               <button class="btn" type="submit">Сomplete</button>
             </li>
 
-            <li class="button-wripper">
+            <li>
               <button
                 type="button"
                 class="btn close-form"
@@ -931,13 +938,20 @@ Feelings from training</textarea
         </form>
 
         <form class="exercise-form" action="#" method="post" id="crunchesForm">
+          <img
+            class="trainning-list-image"
+            src="./img/444.png"
+            alt=" a girl makes exercise"
+            width="370"
+            height="645"
+          />
           <h2 class="trainning-list__header">Crunches and Cool-down</h2>
           <div class="trainning-list">
             <p class="warm-up-text">
-              Lorem ipsum dolor sit amet consecteturCrunches and Cool-down
-              adipisicing elit. Quae consequuntur minima dicta ipsum aliquid
-              consectetur nesciunt iusto error, alias cumque dolor quisquam
-              voluptate. Voluptatum, sequi ea dolor eligendi perspiciatis optio!
+              Finish your workout with core-strengthening exercises. Perform
+              abdominal work with either crunches on the floor or leg raises
+              hanging from a bar, and add lower back hyperextensions to round
+              out your routine.
             </p>
 
             <button
@@ -1123,6 +1137,40 @@ Feelings from training</textarea
         typeText();
       });
     </script>
+    <!-- <script>
+    // Получаем элемент с классом "warm-up-text" и сохраняем исходный текст
+    const element = document.querySelector(".warm-up-text");
+    const text = element.textContent;
+    element.textContent = ""; // Очищаем текст для эффекта набора
+
+    let currentIndex = 0;
+    const typingSpeed = 50; // Скорость появления символов
+
+    // Создаем аудио-объект для звука печатной машинки
+    const typeSound = new Audio("./mp3/clickfour.mp3"); // Убедитесь, что путь к файлу указан корректно
+
+    function typeText() {
+      if (currentIndex < text.length) {
+        element.textContent += text[currentIndex];
+
+        // Воспроизводим звук, если символ не является пробелом
+        if (text[currentIndex] !== ' ') {
+          typeSound.currentTime = 0;
+          typeSound.play();
+        }
+
+        currentIndex++;
+        setTimeout(typeText, typingSpeed);
+      }
+    }
+
+    // Запускаем набор текста только после клика пользователя
+    document.getElementById("startButton").addEventListener("click", function() {
+      typeText();
+      // Скрываем кнопку после запуска, если она больше не нужна
+      this.style.display = "none";
+    });
+  </script> -->
 
     <script type="module" src="./index.js"></script>
   </body>
