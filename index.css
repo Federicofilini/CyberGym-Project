@@ -78,6 +78,17 @@ label {
   border: 1px solid #39e0fa;
   box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
 }
+.main{
+  position: relative;
+}
+.cyber-gym-title{
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 1.5rem;
+}
 
 /* ----------------------------------------------------------------------------Verification form */
 .verification-form {
@@ -176,9 +187,16 @@ label {
   padding: 1px;
 }
 .form-btn {
+  
   width: 58%;
   text-wrap: wrap;
   line-height: 15px;
+}
+.close-btn{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .form__input {
@@ -290,7 +308,7 @@ input:user-invalid {
 
 .trainning-list__header {
   position: absolute;
-  top: 0;
+  top: 5%;
   left: 0%;
   width: 100%;
   text-align: center;
