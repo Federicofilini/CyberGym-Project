@@ -15,7 +15,7 @@
   </head>
   <body>
     <main class="main">
-      <div class="content__box">
+      <div class="content__box background-form">
         <h1 class="cyber-gym-title">Cyber Gym</h1>
         <img
           class="page-img"
@@ -110,7 +110,7 @@
         </div>
         <!-- ------------------------------------------------------------Forms -->
 
-        <form class="exercise-form" id="warmUpForm" action="#" method="post">
+        <form class="exercise-form background-form" id="warmUpForm" action="#" method="post">
           <img
             class="trainning-list-image"
             src="./img/333.png"
@@ -938,7 +938,7 @@ Feelings from training</textarea
           </ul>
         </form>
 
-        <form class="exercise-form" action="#" method="post" id="crunchesForm">
+        <form class="exercise-form background-form" action="#" method="post" id="crunchesForm">
           <img
             class="trainning-list-image"
             src="./img/444.png"
@@ -1136,40 +1136,7 @@ Feelings from training</textarea
         typeText();
       });
     </script>
-    <!-- <script>
-    // Получаем элемент с классом "warm-up-text" и сохраняем исходный текст
-    const element = document.querySelector(".warm-up-text");
-    const text = element.textContent;
-    element.textContent = ""; // Очищаем текст для эффекта набора
-
-    let currentIndex = 0;
-    const typingSpeed = 50; // Скорость появления символов
-
-    // Создаем аудио-объект для звука печатной машинки
-    const typeSound = new Audio("./mp3/clickfour.mp3"); // Убедитесь, что путь к файлу указан корректно
-
-    function typeText() {
-      if (currentIndex < text.length) {
-        element.textContent += text[currentIndex];
-
-        // Воспроизводим звук, если символ не является пробелом
-        if (text[currentIndex] !== ' ') {
-          typeSound.currentTime = 0;
-          typeSound.play();
-        }
-
-        currentIndex++;
-        setTimeout(typeText, typingSpeed);
-      }
-    }
-
-    // Запускаем набор текста только после клика пользователя
-    document.getElementById("startButton").addEventListener("click", function() {
-      typeText();
-      // Скрываем кнопку после запуска, если она больше не нужна
-      this.style.display = "none";
-    });
-  </script> -->
+   
 
     <script type="module" src="./index.js"></script>
   </body>

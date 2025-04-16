@@ -16,7 +16,7 @@
   <body>
     <main>
       <h1 class="cyber-gym-title">Cyber Gym</h1>
-      <div class="content__box">
+      <div class="content__box background-form">
         <img
           class="page-img"
           src="./img/123.webp"
@@ -1132,6 +1132,27 @@ Feelings from training</textarea
         }
 
         typeText();
+      });
+    </script>
+    <script>
+      // Находим все textarea
+      const textareas = document.querySelectorAll("textarea");
+
+      // Навешиваем обработчики событий на каждую textarea
+      textareas.forEach((textarea) => {
+        textarea.addEventListener("focus", () => {
+          // Если значение равно стандартному тексту, очищаем поле
+          if (textarea.value === "Feelings from training") {
+            textarea.value = "";
+          }
+        });
+
+        textarea.addEventListener("blur", () => {
+          // Если поле осталось пустым, возвращаем стандартный текст
+          if (textarea.value.trim() === "") {
+            textarea.value = "Feelings from training";
+          }
+        });
       });
     </script>
     <script type="module" src="./index.js"></script>

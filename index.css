@@ -41,6 +41,7 @@ label {
   color: #39e0fa;
   text-shadow: 0 0 5px #39e0fa, 0 0 10px #39e0fa, 0 0 20px #39e0fa;
   animation: neonFlicker 3s infinite alternate;
+  z-index: 2;
 }
 
 .page-img {
@@ -55,6 +56,8 @@ label {
   max-width: 97%;
   height: 100px;
   border-radius: 20px;
+  z-index: 2;
+  
 }
 
 /* --------------------------------------------------------------------Main buttons form */
@@ -73,21 +76,24 @@ label {
   border: 1px solid transparent;
   border-radius: 2px;
   transition: all 0.3s ease;
+  z-index: 3;
 }
 .main-page-btn__box:hover {
   border: 1px solid #39e0fa;
   box-shadow: inset 0 0 5px #02ddff, 0 0 10px #02ddff;
 }
-.main{
+.main {
   position: relative;
 }
-.cyber-gym-title{
+.cyber-gym-title {
   position: absolute;
   top: 2%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   font-size: 1.5rem;
+  font-family: "Crysis";
+  text-wrap: nowrap;
 }
 
 /* ----------------------------------------------------------------------------Verification form */
@@ -157,9 +163,9 @@ label {
   color: #39e0fab4;
   text-shadow: 0 0 5px #02ddff, 0 0 10px #02ddff, 0 0 20px #00aaff;
   text-wrap: nowrap;
-  font-size: 10px;
+  font-size: 0.8rem;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   letter-spacing: 1px;
   border: 1px solid #27b2c7;
   border-radius: 2px;
@@ -167,7 +173,8 @@ label {
   cursor: pointer;
   margin-bottom: 4%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.353);
+  background-color: rgba(0, 0, 0, 0.504);
+  z-index: 4;
 }
 .btn:hover {
   border: 1px solid #39e0fa;
@@ -187,12 +194,11 @@ label {
   padding: 1px;
 }
 .form-btn {
-  
   width: 58%;
   text-wrap: wrap;
   line-height: 15px;
 }
-.close-btn{
+.close-btn {
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -232,6 +238,7 @@ input:user-invalid {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .menu-nav {
   position: absolute;
@@ -240,7 +247,7 @@ input:user-invalid {
   width: 40%;
   background-color: rgba(0, 0, 0, 0.255);
   backdrop-filter: blur(1px);
-  z-index: 1;
+  z-index: 2;
 }
 .menu-nav__list {
   display: flex;
@@ -269,15 +276,15 @@ input:user-invalid {
   backdrop-filter: blur(1px);
   font-size: 0.6rem;
   line-height: 13px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .monitor-img {
   position: absolute;
   top: 3.5rem;
   width: 100%;
-
   border-radius: 8%;
+  z-index:2;
 }
 
 .women-img {
@@ -303,7 +310,23 @@ input:user-invalid {
   border: 1px solid transparent;
   border-radius: 5px;
   border: 1px solid #5fe7fc;
+  z-index: 2;
 }
+.instructions-box {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.inst-text {
+  position: absolute;
+  top: 13%;
+  font-size: 0.8rem;
+  margin: 5%;
+}
+
 /* -------------------------------------------------------------------Squat */
 
 .trainning-list__header {
@@ -312,11 +335,8 @@ input:user-invalid {
   left: 0%;
   width: 100%;
   text-align: center;
-
   overflow: hidden;
   padding: 6% 2% 2%;
- 
-
   border-bottom: none;
   border-collapse: collapse;
   text-wrap: nowrap;
@@ -339,7 +359,6 @@ input:user-invalid {
   z-index: 2;
 
   padding: 10% 4% 4%;
-  
 
   font-size: 0.7rem;
 }
@@ -429,6 +448,21 @@ input:user-invalid {
   filter: blur(1px) brightness(0.7);
   z-index: 1;
 }
+
+.background-form::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background-image: url(./img/Backgrounds/small-sise.png);
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  z-index: 1;
+  opacity: 0.2;
+}
 /* ------------------------------------------------------------------------------------Footer */
 footer {
   position: absolute;
@@ -441,14 +475,14 @@ footer {
   height: 3%;
   font-family: "Ethnocentric";
   font-size: 0.5rem;
-  
-  z-index: 2;
+
+  z-index: 3;
 }
 .footer__content--box {
   text-align: center;
   width: 100%;
 }
-.footer__link{
+.footer__link {
   margin-left: 5px;
 }
 .footer__link:hover {
