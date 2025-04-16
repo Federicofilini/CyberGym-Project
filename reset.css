@@ -162,6 +162,9 @@ figcaption {
 }
 textarea {
   resize: none;
+  font-family: "Orbitron";
+  font-size: 0.7rem;
+  letter-spacing: 1px;
 }
 select {
   cursor: pointer;

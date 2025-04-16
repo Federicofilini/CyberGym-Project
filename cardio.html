@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/favicono.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Cardio exercise</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="cyber-gym-title">Cyber Gym</h1>
+      <div class="content__box background-form">
+        <img
+          class="page-img"
+          src="./img/Backgrounds/Carbon-three.png"
+          alt="image of a gym"
+          width="375"
+          height="650"
+        />
+
+        <div class="trainning-list-wrapper" id="trainningList">
+          <h2 class="trainning-list__header">Cardio exercise</h2>
+          <nav class="trainning-list-nav">
+            <ul class="trainning-list">
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="runCardioForm"
+                >
+                  Running
+                </button>
+              </li>
+
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="cyclingCardioForm"
+                >
+                  Cycling
+                </button>
+              </li>
+
+              <li class="menu-nav__item">
+                <button
+                  type="button"
+                  class="btn form-btn open-form"
+                  data-form-id="swimmingCardioForm"
+                >
+                  Swimming
+                </button>
+              </li>
+
+              <li class="menu-nav__item">
+                <a
+                  href="./menu.html"
+                  class="btn trainning-list__btn"
+                  id="closeBtn"
+                >
+                  Back
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ------------------------------------------------------------Forms -->
+
+        <form class="exercise-form" action="#" method="post" id="runCardioForm">
+          <h2 class="trainning-list__header">Running</h2>
+          <div class="trainning-list">
+            <div class="cardio__input-wrapper">
+              <label for="runDistance">Distance</label>
+              <input
+                class="input-value input-margin"
+                type="number"
+                id="runDistance"
+                name="runDistance"
+                required
+              />
+              <textarea
+                class="input-value trainning-list__textarea"
+                name="runFeelingsDescription"
+                id="runFeelingsDescription"
+              >
+Feelings from training</textarea
+              >
+            </div>
+            <button class="btn  " type="submit">Complete</button>
+
+            <button
+              type="button"
+              class=" btn close-btn"
+              data-form-id="runCardioForm"
+            >
+              Close
+            </button>
+            
+          </div>
+        </form>
+
+        <form
+          class="exercise-form"
+          action="#"
+          method="post"
+          id="cyclingCardioForm"
+        >
+          <h2 class="trainning-list__header">Cycling</h2>
+          <div class="trainning-list">
+            <div class="cardio__input-wrapper">
+              <label for="cyclingDistance">Distance</label>
+              <input
+                class="input-value input-margin"
+                type="number"
+                id="cyclingDistance"
+                name="cyclingDistance"
+                required
+              />
+              <textarea
+                class="input-value trainning-list__textarea"
+                name="cyclingFeelingsDescription"
+                id="cyclingFeelingsDescription"
+              >
+Feelings from training</textarea
+              >
+            </div>
+            <button class="btn" type="submit">Complete</button>
+            <button
+              type="button"
+              class="btn close-btn"
+              data-form-id="cyclingCardioForm"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+
+        <form
+          class="exercise-form"
+          action="#"
+          method="post"
+          id="swimmingCardioForm"
+        >
+          <h2 class="trainning-list__header">Swimming</h2>
+          <div class="trainning-list">
+            <div class="cardio__input-wrapper">
+              <label for="swimmingDistance">Distance</label>
+              <input
+                class="input-value input-margin"
+                type="number"
+                id="swimmingDistance"
+                name="swimmingDistance"
+                required
+              />
+              <textarea
+                class="input-value trainning-list__textarea"
+                name="swimmingFeelingsDescription"
+                id="swimmingFeelingsDescription"
+              >
+Feelings from training</textarea
+              >
+            </div>
+            <button class="btn" type="submit">Complete</button>
+            <button
+              type="button"
+              class="btn close-btn"
+              data-form-id="swimmingCardioForm"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__content--box">
+        <h3>
+          All rights belong to
+          <a
+            href="https://vk.com/id48109283"
+            class="footer__link"
+            target="_blank"
+            >Pavel Mironov</a
+          >
+        </h3>
+      </div>
+    </footer>
+
+    <script>
+      // Находим все textarea
+      const textareas = document.querySelectorAll("textarea");
+
+      // Навешиваем обработчики событий на каждую textarea
+      textareas.forEach((textarea) => {
+        textarea.addEventListener("focus", () => {
+          // Если значение равно стандартному тексту, очищаем поле
+          if (textarea.value === "Feelings from training") {
+            textarea.value = "";
+          }
+        });
+
+        textarea.addEventListener("blur", () => {
+          // Если поле осталось пустым, возвращаем стандартный текст
+          if (textarea.value.trim() === "") {
+            textarea.value = "Feelings from training";
+          }
+        });
+      });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Обработчик для кнопок открытия форм
+          document.querySelectorAll(".open-form").forEach((button) => {
+            button.addEventListener("click", () => {
+              // Получаем ID формы для открытия
+              const formId = button.getAttribute("data-form-id");
+              const form = document.getElementById(formId);
+      
+              // Скрываем все формы с классом .exercise-form
+              document.querySelectorAll(".exercise-form").forEach((form) => {
+                form.style.visibility = "hidden";
+                form.style.opacity = "0";
+              });
+      
+              // Показываем выбранную форму
+              if (form) {
+                form.style.visibility = "visible";
+                form.style.opacity = "1";
+              }
+      
+              // Скрываем список тренировок, если он есть
+              const trainingList = document.getElementById("trainningList");
+              if (trainingList) {
+                trainingList.style.display = "none";
+              }
+            });
+          });
+      
+          // Обработчик для кнопок закрытия форм
+          document.querySelectorAll(".close-btn").forEach((button) => {
+            button.addEventListener("click", () => {
+              // Получаем ID формы для закрытия
+              const formId = button.getAttribute("data-form-id");
+              const form = document.getElementById(formId);
+      
+              // Скрываем форму
+              if (form) {
+                form.style.visibility = "hidden";
+                form.style.opacity = "0";
+              }
+      
+              // Показываем список тренировок, если он есть
+              const trainingList = document.getElementById("trainningList");
+              if (trainingList) {
+                trainingList.style.display = "block";
+              }
+            });
+          });
+        });
+      </script>
+    <script>
+      // Обработчики для всех форм
+      function setupWeightCalculations(
+        formId,
+        weightName,
+        repsName,
+        totalWeightName
+      ) {
+        const form = document.getElementById(formId);
+
+        // Ищем поля веса и повторений внутри формы
+        const weightInputs = form.querySelectorAll(
+          `input[name^="${weightName}"]`
+        );
+        const repsInputs = form.querySelectorAll(`input[name^="${repsName}"]`);
+        const totalWeightField = form.querySelector(
+          `input[name="${totalWeightName}"]`
+        );
+
+        function calculateTotalWeight() {
+          let total = 0;
+
+          // Перебираем поля веса и повторений парами
+          weightInputs.forEach((weightInput, index) => {
+            const repsInput = repsInputs[index];
+            if (weightInput && repsInput) {
+              const weight = parseFloat(weightInput.value) || 0;
+              const reps = parseFloat(repsInput.value) || 0;
+              total += weight * reps;
+            }
+          });
+
+          // Заполняем итоговое значение в поле Total
+          if (totalWeightField) {
+            totalWeightField.value = total;
+          }
+        }
+
+        // Навешиваем обработчики на все поля веса и повторений
+        weightInputs.forEach((input) =>
+          input.addEventListener("input", calculateTotalWeight)
+        );
+        repsInputs.forEach((input) =>
+          input.addEventListener("input", calculateTotalWeight)
+        );
+      }
+
+      // Добавляем расчёты для всех нужных форм
+      setupWeightCalculations(
+        "benchForm",
+        "benchWeight",
+        "benchRaps",
+        "benchWeightTotal"
+      );
+      setupWeightCalculations(
+        "chestFlyForm",
+        "chestFlyWeight",
+        "chestFlyRaps",
+        "chestFlyWeightTotal"
+      );
+      setupWeightCalculations(
+        "militaryPressForm",
+        "militaryPressWeight",
+        "militaryPressRaps",
+        "militaryPressWeightTotal"
+      );
+      setupWeightCalculations(
+        "dumbbellCurlForm",
+        "dumbbellCurlWeight",
+        "dumbbellCurlRaps",
+        "dumbbellCurlWeightTotal"
+      );
+      setupWeightCalculations(
+        "tricepsExtensionForm",
+        "tricepsExtensionWeight",
+        "tricepsExtensionRaps",
+        "tricepsExtensionWeightTotal"
+      );
+    </script>
+    <script>
+      const elements = document.querySelectorAll("p, h2, h4, h5, h6"); // Выбираем все p и заголовки
+
+      elements.forEach((element) => {
+        const text = element.textContent;
+        element.textContent = ""; // Очищаем текст элемента
+        let currentIndex = 0;
+        const typingSpeed = 50; // Скорость появления текста (меньше число — быстрее)
+
+        function typeText() {
+          if (currentIndex < text.length) {
+            element.textContent += text[currentIndex];
+            currentIndex++;
+            setTimeout(typeText, typingSpeed);
+          }
+        }
+
+        typeText();
+      });
+    </script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

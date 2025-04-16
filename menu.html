@@ -60,11 +60,10 @@
               <a href="lift.html" class="btn">Dead lift</a>
             </li>
             <li class="menu-nav__item">
-              <a href="#" class="btn">Cardio</a>
+              <a href="./cardio.html" class="btn">Cardio</a>
             </li>
             <li class="menu-nav__item">
-              <button class="btn"> Instructions</button>
-              
+              <button class="btn" id="insttructionBtn">Instructions</button>
             </li>
             <li class="menu-nav__item">
               <a href="./index.html" class="btn">Back</a>
@@ -73,15 +72,14 @@
         </nav>
         <div class="instructions-box">
           <h3 class="trainning-list__header">Instructions</h3>
-          <img class="page-img" src="./img/img-for-instructions.jpg" alt="Image with a soldier" width="370" height="645">
-          <p class="inst-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Magnam voluptatem possimus, fugit molestias soluta illum, hic
-            perferendis voluptas quis dolorum recusandae omnis error
-            deleniti accusantium aliquid? Exercitationem ipsa accusantium
-            ipsam.
+
+          <p class="inst-text warm-up-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            voluptatem possimus, fugit molestias soluta illum, hic perferendis
+            voluptas quis dolorum recusandae omnis error deleniti accusantium
+            aliquid? Exercitationem ipsa accusantium ipsam.
           </p>
-          <button class="btn close-btn">Close</button>
+          <button class="btn close-btn" id="closeInstBtn">Close</button>
         </div>
       </div>
     </main>
@@ -120,5 +118,20 @@
       });
     </script>
     <script type="module" src="./index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const instructionBtn = document.getElementById("insttructionBtn");
+        const closeInstBtn = document.getElementById("closeInstBtn");
+        const instructionsBox = document.querySelector(".instructions-box");
+
+        instructionBtn.addEventListener("click", function () {
+          instructionsBox.style.display = "block";
+        });
+
+        closeInstBtn.addEventListener("click", function () {
+          instructionsBox.style.display = "none";
+        });
+      });
+    </script>
   </body>
 </html>
