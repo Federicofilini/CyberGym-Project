@@ -15,6 +15,7 @@
   </head>
   <body>
     <main class="main">
+      <div class="cover-effect"></div>
       <div class="content__box background-form">
         <h1 class="cyber-gym-title">Cyber Gym</h1>
         <img
@@ -1141,5 +1142,19 @@ Feelings from training</textarea
    
 
     <script type="module" src="./index.js"></script>
+    <audio id="cyberSound" src="./аудио/44639f201e3bee9.mp3"></audio>
+
+    <script>
+      window.addEventListener("load", () => {
+        const sound = document.getElementById("cyberSound");
+
+        // Небольшая задержка, чтобы синхронизироваться с анимацией
+        setTimeout(() => {
+          sound.play().catch((e) => {
+            console.log("Ошибка при воспроизведении звука:", e);
+          });
+        }, 300); // можно увеличить, если звук должен идти чуть позже
+      });
+    </script>
   </body>
 </html>

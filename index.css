@@ -627,3 +627,28 @@ footer {
     width: 23%;
   }
 }
+
+.cover-effect{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./img/Backgrounds/small-sise.png) center center / cover no-repeat;
+  background-color: #1f1c1cd4;
+  z-index: 4;
+  animation: hideOverlay 1.2s ease-out 1s forwards;
+  transform-origin: center;
+}
+
+@keyframes hideOverlay {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    visibility: hidden;
+  }
+}

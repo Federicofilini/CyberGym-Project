@@ -15,6 +15,7 @@
   </head>
   <body>
     <main>
+      <div class="cover-effect"></div>
       <h1 class="cyber-gym-title">Cyber Gym</h1>
       <div class="content__box background-form">
         <img
@@ -93,16 +94,15 @@
 Feelings from training</textarea
               >
             </div>
-            <button class="btn  " type="submit">Complete</button>
+            <button class="btn" type="submit">Complete</button>
 
             <button
               type="button"
-              class=" btn close-btn"
+              class="btn close-btn"
               data-form-id="runCardioForm"
             >
               Close
             </button>
-            
           </div>
         </form>
 
@@ -215,56 +215,56 @@ Feelings from training</textarea
       });
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          // Обработчик для кнопок открытия форм
-          document.querySelectorAll(".open-form").forEach((button) => {
-            button.addEventListener("click", () => {
-              // Получаем ID формы для открытия
-              const formId = button.getAttribute("data-form-id");
-              const form = document.getElementById(formId);
-      
-              // Скрываем все формы с классом .exercise-form
-              document.querySelectorAll(".exercise-form").forEach((form) => {
-                form.style.visibility = "hidden";
-                form.style.opacity = "0";
-              });
-      
-              // Показываем выбранную форму
-              if (form) {
-                form.style.visibility = "visible";
-                form.style.opacity = "1";
-              }
-      
-              // Скрываем список тренировок, если он есть
-              const trainingList = document.getElementById("trainningList");
-              if (trainingList) {
-                trainingList.style.display = "none";
-              }
+      document.addEventListener("DOMContentLoaded", function () {
+        // Обработчик для кнопок открытия форм
+        document.querySelectorAll(".open-form").forEach((button) => {
+          button.addEventListener("click", () => {
+            // Получаем ID формы для открытия
+            const formId = button.getAttribute("data-form-id");
+            const form = document.getElementById(formId);
+
+            // Скрываем все формы с классом .exercise-form
+            document.querySelectorAll(".exercise-form").forEach((form) => {
+              form.style.visibility = "hidden";
+              form.style.opacity = "0";
             });
-          });
-      
-          // Обработчик для кнопок закрытия форм
-          document.querySelectorAll(".close-btn").forEach((button) => {
-            button.addEventListener("click", () => {
-              // Получаем ID формы для закрытия
-              const formId = button.getAttribute("data-form-id");
-              const form = document.getElementById(formId);
-      
-              // Скрываем форму
-              if (form) {
-                form.style.visibility = "hidden";
-                form.style.opacity = "0";
-              }
-      
-              // Показываем список тренировок, если он есть
-              const trainingList = document.getElementById("trainningList");
-              if (trainingList) {
-                trainingList.style.display = "block";
-              }
-            });
+
+            // Показываем выбранную форму
+            if (form) {
+              form.style.visibility = "visible";
+              form.style.opacity = "1";
+            }
+
+            // Скрываем список тренировок, если он есть
+            const trainingList = document.getElementById("trainningList");
+            if (trainingList) {
+              trainingList.style.display = "none";
+            }
           });
         });
-      </script>
+
+        // Обработчик для кнопок закрытия форм
+        document.querySelectorAll(".close-btn").forEach((button) => {
+          button.addEventListener("click", () => {
+            // Получаем ID формы для закрытия
+            const formId = button.getAttribute("data-form-id");
+            const form = document.getElementById(formId);
+
+            // Скрываем форму
+            if (form) {
+              form.style.visibility = "hidden";
+              form.style.opacity = "0";
+            }
+
+            // Показываем список тренировок, если он есть
+            const trainingList = document.getElementById("trainningList");
+            if (trainingList) {
+              trainingList.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
     <script>
       // Обработчики для всех форм
       function setupWeightCalculations(
@@ -365,5 +365,19 @@ Feelings from training</textarea
       });
     </script>
     <script type="module" src="./index.js"></script>
+    <audio id="cyberSound" src="./аудио/44639f201e3bee9.mp3"></audio>
+
+    <script>
+      window.addEventListener("load", () => {
+        const sound = document.getElementById("cyberSound");
+
+        // Небольшая задержка, чтобы синхронизироваться с анимацией
+        setTimeout(() => {
+          sound.play().catch((e) => {
+            console.log("Ошибка при воспроизведении звука:", e);
+          });
+        }, 300); // можно увеличить, если звук должен идти чуть позже
+      });
+    </script>
   </body>
 </html>
